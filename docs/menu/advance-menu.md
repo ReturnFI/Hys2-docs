@@ -3,7 +3,7 @@
 ---
 <p align="center">
 
-<img src="/docs/Picture/advance-menu.png" width="700" height="400">
+<img src="../../Picture/advance-menu.png" width="700" height="400">
 </p>
 
 ## توضیحات
