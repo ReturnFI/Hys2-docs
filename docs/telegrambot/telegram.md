@@ -155,10 +155,11 @@ FILES_TO_BACKUP=(
 بات `botfather` باز کنید کامند `mybots/` بزنید ربات مورد نظرتون انتخاب کنید
 بعد روی دکمه `Bot Settings` بزنید در منوی جدید دکمه `Inline Mode` انتخاب کنید و در نهایت این فیچر رو `Turn On` کنید 
 
-#### ویدئو
+### ویدئو
 
 <p align="center">
-<video controls src="../../Picture/Telegram_inline_search.mp4" title="Title" width="320" height="200"></video>
+<img src="../../Picture/telegram_search.gif" width="320" height="200">
 </p>
+
 
 
