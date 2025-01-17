@@ -10,7 +10,6 @@ nav:
     - منو (Advance): menu/advance-menu.md
   - بات تلگرام: telegrambot/telegram.md
 
-  
 theme:
   name: material
   features:
@@ -43,6 +42,8 @@ theme:
         icon: material/toggle-switch-off
         name: Switch to system preference
 
+repo_name: ReturnFI/Hysteria2
+repo_url: https://github.com/ReturnFI/Hysteria2/
 
 markdown_extensions:
   - abbr
