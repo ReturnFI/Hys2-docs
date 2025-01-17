@@ -143,3 +143,22 @@ FILES_TO_BACKUP=(
     "/etc/hysteria/.configs.env"
 )
 ```
+
+----
+
+## جستجو کاربر (Search Users)
+
+برای جستجو کاربر در ربات شما نیاز دارید تا از طریق [`@BotFather`](https://t.me/BotFather) گزینه `Inline mode` برای ربات فعال کنید.
+
+طریقه فعال سازی :
+
+بات `botfather` باز کنید کامند `mybots/` بزنید ربات مورد نظرتون انتخاب کنید
+بعد روی دکمه `Bot Settings` بزنید در منوی جدید دکمه `Inline Mode` انتخاب کنید و در نهایت این فیچر رو `Turn On` کنید 
+
+#### ویدئو
+
+<p align="center">
+<video controls src="../../Picture/Telegram_inline_search.mp4" title="Title" width="320" height="200"></video>
+</p>
+
+
