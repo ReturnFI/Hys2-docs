@@ -22,26 +22,36 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
+    - header.autohide
+
   language: 'fa'
   direction: 'rtl'
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: teal
       accent: indigo
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
+      primary: blue grey
       accent: indigo
       toggle:
-        icon: material/toggle-switch-off
+        icon: material/weather-sunny
         name: Switch to system preference
 
 repo_name: ReturnFI/Hysteria2
 repo_url: https://github.com/ReturnFI/Hysteria2/
+
+plugins:
+  - blog
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+
+extra:
+  generator: false
 
 markdown_extensions:
   - abbr
