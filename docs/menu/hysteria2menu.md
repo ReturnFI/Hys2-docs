@@ -4,7 +4,7 @@
 در این منو شما امکان مدیریت کاربران رو دارید.
 <br>
 
-<img src="/docs/Picture/hysteria2menu.png">
+<img src="../../Picture/hysteria2menu.png">
 </p>
 
 ### توضیحات منو
