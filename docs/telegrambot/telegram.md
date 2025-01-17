@@ -10,7 +10,7 @@
 
 <p align="center">
 
-<img src="../../Picture/bot.png" width="700" height="400">
+<img src="https://github.com/user-attachments/assets/6dc5fc29-0dbb-4729-9757-dca4388c0404" width="300" height="500">
 </p>
 
 ----
