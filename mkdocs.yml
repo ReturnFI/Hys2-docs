@@ -8,7 +8,9 @@ nav:
     - منو اصلی: menu/main-menu.md
     - منو (Hysteria2): menu/hysteria2menu.md
     - منو (Advance): menu/advance-menu.md
+  - بات تلگرام: telegrambot/telegram.md
 
+  
 theme:
   name: material
   features:
