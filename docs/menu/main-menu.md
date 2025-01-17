@@ -1,7 +1,7 @@
 ## منو اصلی
 ---
 <p align="center">
-<img src="/docs/Picture/main-menu.png">
+<img src="../../Picture/main-menu.png">
 </p>
 
 ---
