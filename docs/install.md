@@ -38,5 +38,5 @@ bash <(curl https://raw.githubusercontent.com/ReturnFI/Hysteria2/main/install.sh
 ## ویدئو
 ---
 <p align="center">
-<img src="/docs/Picture/install.gif">
+<img src="../../Picture/install.gif">
 </p>
