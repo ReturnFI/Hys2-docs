@@ -3,7 +3,7 @@
 ---
 <p align="center">
 
-<img src="https://github.com/user-attachments/assets/16bbe204-773b-41c4-97b7-74f131989a0e" width="700" height="400">
+<img src="https://github.com/user-attachments/assets/417cc9ce-d460-46c0-8e2f-0b163af41b29" width="700" height="400">
 </p>
 
 
@@ -153,7 +153,88 @@ Enter the admin IDs (comma-separated): 1562023210,1871475213
 ---
 
 
-### 8. تغییر پورت (Change Port Hysteria2)
+### 8. پنل وب (Web Panel)
+
+
+بعد از انتخاب این گزینه زیر منو زیر برای شما اجرا میشود
+
+```
+Services Status:
+hysteria-webpanel.service: Inactive
+hysteria-caddy.service: Inactive
+
+1. Start WebPanel service
+2. Stop WebPanel service
+3. Get WebPanel URL
+4. Show API Token
+0. Back
+```
+
+
+- بخش Services Status نمایان گر فعال یا غیر فعال بودن سرویس های وب پنل میباشد.
+
+<h5>
+ نکته : 
+</h5>
+
+ پنل وب از سرویس `caddy` استفاده میکند در صورت داشتن سرویس های دیگر مانند `nginx` و `apache` ممکن است وب پنل با مشکل مواجعه شود
+
+
+1.راه اندازی پنل وب (Start WebPanel service)
+
+
+پس از انتخاب این گزینه  به ترتیب از شما مقادیر زیر را میخواهد:
+
+- Enter the domain name for the SSL certificate
+
+مقدار دامنه یا ساب دامنه خود را بدون `https://` وارد نمایید
+
+
+- Enter the port number for the service
+
+بعد وارد کردن دامنه از شما مقدار پورت برای راه اندازی سرویس پنل وب را میخواهد 
+
+از پورت های غیر اصلی و خالی استفاده نمایید به طور مثال `8443`
+
+
+- Enter the admin username
+
+مقدار نام کاربری ادمین را وارد نماید
+
+
+- Enter the admin password
+
+مقدار پسورد برای ادمین را وارد نمایید (از پسورد های قوی استفاده نمایید)
+
+سپس چند دقیقه صبر نمایید که پکیج ها و سرویس های مورد نظر نصب شوند و در انتها آدرس ورود به پنل برای شما به شکل زیر نمایش داده میشود
+
+```
+Hysteria web panel is now running. 
+The service is accessible on: https://example.com:8443/8b3dc8o7w4d5djg77t85r7c84e8assvc/
+```
+
+2.غیر فعال سازی سرویس پنل وب (Stop WebPanel service)
+
+بعد از انتخاب این گزینه سرویس پنل وب غیرفعال و حذف میشود.
+
+
+3.دریافت آدرس پنل (Get WebPanel URL)
+
+در صورت نیاز میتواند آدرس ورود به پنل را با این گزینه دریافت کنید.
+
+
+4.نمایش توکن (Show API Token)
+
+در صورتی که خواستید از API طراحی شده برای پنل استفاده کنید باید با استفاده از توکن احراز هویت را انجام دهید.
+
+این گزینه مقدار توکن API پنل شما را نمایش میدهد.
+
+
+
+---
+
+
+### 9. تغییر پورت (Change Port Hysteria2)
 
 
 بعد از انتخاب این گزینه از شما درخواست پورت جدید میشود.
@@ -163,7 +244,8 @@ Enter the admin IDs (comma-separated): 1562023210,1871475213
 ---
 
 
-### 9. تغییر SNI (Change SNI Hysteria2)
+
+### 10. تغییر SNI (Change SNI Hysteria2)
 
 
 با استفاده از این گزینه شما میتوانید `SNI` خود را که در هنگام نصب انتخاب کرده اید را تغییر دهید.
@@ -173,7 +255,7 @@ Enter the admin IDs (comma-separated): 1562023210,1871475213
 ---
 
 
-### 10. مدیریت مبهم سازی (Manage OBFS)
+### 11. مدیریت مبهم سازی (Manage OBFS)
 
 
 این گزینه داری زیر منو زیر میباشد:
@@ -214,7 +296,7 @@ Enter the admin IDs (comma-separated): 1562023210,1871475213
 ----
 
 
-### 11. تغییر آدرس ای پی (Change IPs 4-6 )
+### 12. تغییر آدرس ای پی (Change IPs 4-6 )
 
 
 درصورتی که از تانلینگ یا فلوتینگ `IP` استفاده میکنید میتوانید از این گزینه استفاده کنید و مقادیر `IP` کانفیگ های خود را تغییر دهید.
@@ -234,7 +316,7 @@ Enter the admin IDs (comma-separated): 1562023210,1871475213
 ---
 
 
-### 12. بروزرسانی فایل های GEO (Update geo Files)
+### 13. بروزرسانی فایل های GEO (Update geo Files)
 
 
 فایل های `geo` برای مسیریابی بهتر و کنترل ترافیک استفاده میشوند.
@@ -257,7 +339,7 @@ Configure Geo Update Options:
 
 ---
 
-### 13. مدیریت استتار (Manage Masquerade)
+### 14. مدیریت استتار (Manage Masquerade)
 
 یکی از کلیدهای تقویت کننده Hysteria در برابر سانسور، توانایی آن در وانمود کردن به عنوان ترافیک استاندارد HTTP/3 است. این بدان معناست که بسته‌ها نه تنها برای تجهیزات میانی به‌صورت HTTP/3 دیده می‌شوند، بلکه سرور نیز به درخواست‌های HTTP مانند یک سرور وب معمولی پاسخ می‌دهد. با این حال، این به این معناست که سرور شما باید واقعاً محتوایی را ارائه دهد تا برای سانسورچیان احتمالی واقعی به نظر برسد.
 
@@ -282,7 +364,7 @@ Configure Geo Update Options:
 ---
 
 
-### 14. راه اندازی مجدد (Restart Hysteria2)
+### 15. راه اندازی مجدد (Restart Hysteria2)
 
 با استفاده از این گزینه میتوانید سرویس Hysteria2 را ریستارت کنید.
 
@@ -293,7 +375,7 @@ Configure Geo Update Options:
 ---
 
 
-### 15. بروزرسانی هسته (Update Core Hysteria2)
+### 16. بروزرسانی هسته (Update Core Hysteria2)
 
 
 پس از اجرای این گزینه هسته `Hysteria2` به آخرین ورژن بروزرسانی خواهد شد.
@@ -301,7 +383,7 @@ Configure Geo Update Options:
 ---
 
 
-### 16. حذف اسکریپت (Uninstall Hysteria2)
+### 17. حذف اسکریپت (Uninstall Hysteria2)
 
 
 پس از انتخاب این گزینه کل سرویس ها و فایل مربوط به اسکریپت و هسته حذف خواهند شد.
