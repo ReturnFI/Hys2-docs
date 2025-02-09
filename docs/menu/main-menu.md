@@ -1,7 +1,7 @@
 ## منو اصلی
 ---
 <p align="center">
-<img src="../../Picture/main-menu.png">
+<img src="https://github.com/user-attachments/assets/50c3338d-eee9-4919-8af4-4e2a6f86a830">
 </p>
 
 ---
