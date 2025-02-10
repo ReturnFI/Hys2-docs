@@ -9,6 +9,13 @@ nav:
     - منو (Hysteria2): menu/hysteria2menu.md
     - منو (Advance): menu/advance-menu.md
   - بات تلگرام: telegrambot/telegram.md
+  
+  - پنل وب: 
+    - صفحه اصلی: webpanel/index.md
+    - صفحه کابران: webpanel/users.md
+    - صفحه تنظیمات: webpanel/settings.md
+    - صفحه کانفیگ: webpanel/config.md
+    - صفحه API: webpanel/api.md
 
 theme:
   name: material
