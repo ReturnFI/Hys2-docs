@@ -4,7 +4,7 @@
 In this menu, you can manage users.
 <br>
 
-<img src="/Picture/hysteria2menu.png">
+<img src="https://raw.githubusercontent.com/ReturnFI/Hys2-docs/refs/heads/main/docs/Picture/hysteria2menu.png">
 </p>
 
 ### Menu Description
