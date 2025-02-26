@@ -37,5 +37,5 @@ You can use any port of your choice. For example:
 ## Video
 ---
 <p align="center">
-<img src="../Picture/install.gif">
+<img src="../../Picture/install.gif">
 </p>
