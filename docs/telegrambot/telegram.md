@@ -162,6 +162,6 @@ Select `Inline Mode` and press `Turn On`.
 ### Video
 
 <p align="center">
-<img src="/Picture/telegram_search.gif" width="320" height="200">
+<img src="https://returnfi.github.io/Hys2-docs/Picture/telegram_search.gif" width="320" height="200">
 </p>
 

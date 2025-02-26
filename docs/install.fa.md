@@ -39,5 +39,5 @@ bash <(curl https://raw.githubusercontent.com/ReturnFI/Hysteria2/main/install.sh
 ---
 
 <p align="center">
-<img src="../Picture/install.gif">
+<img src="https://returnfi.github.io/Hys2-docs/Picture/install.gif">
 </p>
