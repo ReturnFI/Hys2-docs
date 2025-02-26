@@ -65,6 +65,7 @@ plugins:
               - صفحه تنظیمات: webpanel/settings.md
               - صفحه کانفیگ: webpanel/config.md
               - مستندات API: webpanel/api.md
+            - مستندات CLI: cli/index.fa.md
 
 extra:
   generator: false
@@ -90,6 +91,9 @@ nav:
     - Settings Page: webpanel/settings.md
     - Config Page: webpanel/config.md
     - API Documentation: webpanel/api.md
+  
+  - CLI: cli/index.md
+
 
 markdown_extensions:
   - abbr
