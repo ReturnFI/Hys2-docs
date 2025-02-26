@@ -1,16 +1,15 @@
-# 🚀 اسکریپت مدیریت Hysteria2 🚀
+# 🚀 Hysteria2 Management Script 🚀
 
-پنل مدیریتی قدرتمند و کاربرپسند برای  Hysteria2. ویژگی‌ها شامل مدیریت کامل کاربران، نظارت بر ترافیک، یکپارچگی WARP، پشتیبانی از ربات تلگرام و پشتیبانی از چندین فرمت اشتراک (ساب لینک) است. نصب ساده با گزینه‌های پیکربندی پیشرفته برای کاربران مبتدی و حرفه‌ای.
+A powerful and user-friendly management panel for Hysteria2. Features include full user management, traffic monitoring, WARP integration, Telegram bot support, and multiple subscription formats (sub-links). Simple installation with advanced configuration options for both beginners and professionals.
 
-🛡️ ویژگی‌های کلیدی:
+🛡️ Key Features:
 
-- 🔐 مدیریت کامل زمان و ترافیک کاربران
-- 📊 نظارت بر ترافیک به صورت لحظه‌ای
-- 🌐 یکپارچگی WARP
-- 🤖 پشتیبانی از ربات تلگرام
-- 🔄 پشتیبانی از چندین فرمت اشتراک(ساب لینک)
-- 🚄 بهینه‌سازی TCP Brutal
-- 🌍 مسیریابی مبتنی بر Geo Files
-- 🔒 OBFS (مخفی‌سازی)
-- 📱 URIs سازگار با موبایل
-
+- 🔐 Full user traffic and time management  
+- 📊 Real-time traffic monitoring  
+- 🌐 WARP integration  
+- 🤖 Telegram bot support  
+- 🔄 Support for multiple subscription formats (sub-links)  
+- 🚄 Optimized TCP Brutal  
+- 🌍 Geo Files-based routing  
+- 🔒 OBFS (obfuscation)  
+- 📱 Mobile-compatible URIs  

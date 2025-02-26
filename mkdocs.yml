@@ -1,21 +1,4 @@
-site_name: مستندات Hysteria2
-nav:
-  - صفحه اصلی: index.md
-  - شروع:
-    - نصب: install.md
-    - پیش نیاز ها: prerequisite.md
-  - منو ها:
-    - منو اصلی: menu/main-menu.md
-    - منو (Hysteria2): menu/hysteria2menu.md
-    - منو (Advance): menu/advance-menu.md
-  - بات تلگرام: telegrambot/telegram.md
-  
-  - پنل وب: 
-    - صفحه اصلی: webpanel/index.md
-    - صفحه کابران: webpanel/users.md
-    - صفحه تنظیمات: webpanel/settings.md
-    - صفحه کانفیگ: webpanel/config.md
-    - مستندات API: webpanel/api.md
+site_name: Hysteria2
 
 theme:
   name: material
@@ -31,10 +14,7 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
-    - header.autohide
 
-  language: 'fa'
-  direction: 'rtl'
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -55,9 +35,36 @@ repo_name: ReturnFI/Hysteria2
 repo_url: https://github.com/ReturnFI/Hysteria2/
 
 plugins:
-  - blog
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+      
+  - i18n:
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+          site_name: Hysteria2 Documentation 
+        - locale: fa
+          name: پارسی
+          build: true
+          site_name: مستندات Hysteria2
+          nav:
+            - صفحه اصلی: index.md
+            - شروع:
+              - نصب: install.md
+              - پیش نیاز ها: prerequisite.md
+            - منو ها:
+              - منو اصلی: menu/main-menu.md
+              - منو (Hysteria2): menu/hysteria2menu.md
+              - منو (Advance): menu/advance-menu.md
+            - بات تلگرام: telegrambot/telegram.md
+            - پنل وب: 
+              - صفحه اصلی: webpanel/index.md
+              - صفحه کابران: webpanel/users.md
+              - صفحه تنظیمات: webpanel/settings.md
+              - صفحه کانفیگ: webpanel/config.md
+              - مستندات API: webpanel/api.md
 
 extra:
   generator: false
@@ -66,6 +73,23 @@ extra:
       link: https://github.com/ReturnFI/Hysteria2/
     - icon: fontawesome/brands/telegram
       link: https://t.me/hysteria2_panel
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: install.md
+    - Prerequisites: prerequisite.md
+  - Menus:
+    - Main Menu: menu/main-menu.md
+    - Menu (Hysteria2): menu/hysteria2menu.md
+    - Menu (Advanced): menu/advance-menu.md
+  - Telegram Bot: telegrambot/telegram.md
+  - Web Panel:
+    - Home: webpanel/index.md
+    - Users Page: webpanel/users.md
+    - Settings Page: webpanel/settings.md
+    - Config Page: webpanel/config.md
+    - API Documentation: webpanel/api.md
 
 markdown_extensions:
   - abbr
@@ -104,4 +128,3 @@ markdown_extensions:
 
 extra_css:
   - 'stylesheets/extra.css'
-  

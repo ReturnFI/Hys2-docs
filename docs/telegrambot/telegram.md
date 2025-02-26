@@ -1,12 +1,12 @@
-# بات تلگرام
+# Telegram Bot
 
-## آموزش فعال سازی
+## Activation Tutorial
 
-طبق آموزش این [لینک](https://returnfi.github.io/Hys2-docs/menu/advance-menu/#5-telegram-bot) بات تلگرام میتونید فعال کنید.
+You can activate the Telegram bot by following the instructions in this [link](https://returnfi.github.io/Hys2-docs/menu/advance-menu/#5-telegram-bot).
 
-بعد از فعال سازی وارد تلگرام خودتون بشید و بات رو `start` کنید.
+After activation, go to your Telegram and `start` the bot.
 
-بعد از `start` شدن بات منو برای نمایش داده میشود
+Once the bot is started, the menu will be displayed:
 
 <p align="center">
 
@@ -15,109 +15,112 @@
 
 ----
 
-## افزودن کاربر(Add User)
+## Add User
 
-بعد از کلیک روی دکمه `Add User` از شما مقادیر زیر به ترتیب میخواد:
+After clicking the `Add User` button, you will be prompted for the following values, in order:
 
-### 1. Enter Username 
+### 1. Enter Username
 
-نام کاربر رو برای کاربر باید انتخاب کنید فقط از حروف و اعداد استفاده کنید.
+Choose a username for the user.  Use only letters and numbers.
 
-### 2. Enter traffic limit(GB)
+*   **Developer Note:** This restriction is likely for simplicity and to avoid issues with special characters in filenames or database entries.
 
-مقدار ترافیک مصرفی کاربر بر حسب گیگابایت وارد کنید(اعداد)
+### 2. Enter traffic limit (GB)
 
-مثال : `30`
+Enter the user's traffic limit in gigabytes (numbers only).
+
+Example: `30`
 
 ### 3. Enter expiration days
 
-مقدار روز کاربر را وارد کنید 
+Enter the number of days the user's account will be valid.
 
-مثال : `30`
+Example: `30`
 
+After completion, the `qrcode` and `URI` for the user's `IPv4` configuration will be sent.
 
-پس اتمام به `qrcode` و `URI` کانفیگ `IPv4` کاربر ارسال میشود.
-
-
-نکته:
-در تمام مراحل میتوانید با استفاده از دکمه `Cancel` و `Back` مراحل رو کنسل یا به عقب برگردید.
+**Note:** At any stage, you can use the `Cancel` and `Back` buttons to cancel the process or go back.
 
 ----
 
-## نمایش کاربر (Show User)
+## Show User
 
-پس از انتخاب گزینه `Show User` از شما نام کاربری کاربر سوال میشود
+After selecting the `Show User` option, you will be asked for the user's username.
 
-پس وارد کردن نام کاربری درست، اطلاعات کاربر در قالب یک پیام شامل `qrcode` ، `URI` ، مصرف کلی و `8` کلید نمایش داده میشود.
+After entering the correct username, the user's information will be displayed in a message containing a `qrcode`, `URI`, total usage, and 8 buttons.
 
+### Buttons
 
-### کلید ها
+#### 1. Reset User
 
-#### 1. Reset User 
+Using this button, all of the user's information will be reset. If the volume and time have expired, it will be updated again, and the user will be able to use their configuration.
 
-با استفاده از این کلید کلیه اطلاعات کاربر شما ریست شده و اگر حجم و زمان تمام کرده باشد دوباره بروزسانی و قادر به استفاده از کانفیگ خودش میباشد.
+*   **Developer Note:** This is essentially a "renew" function, resetting both traffic and expiration date.
 
 #### 2. IPv6-URI
 
-مقادیر `URI` و `qrcode` کانفیگ ورژن `IPv6` برای شما در قابل یک پیام نمایش داده میشود.
+The `URI` and `qrcode` for the `IPv6` configuration will be displayed in a message.
 
 #### 3. Edit Username
 
-پس انتخاب این گزینه از شما نام کاربری جدید درخواست میشود و میتوانید نام کاربر را تغییر دهید.
+After selecting this option, you will be prompted for a new username, and you can change the user's username.
 
-- نکته:
-درصورت تغییر نام کاربری کانفیگ کاربر از کار خواهد افتاد.
+*   **Note:** Changing the username will invalidate the user's configuration.
+* **Developer Note**: Important that config is tied to the username.
 
 #### 4. Edit Traffic Limit
 
-با استفاده از این گزینه میتوانید مقدار ترافیک مصرفی کاربر را تغییر دهید.
+Using this option, you can change the user's traffic limit.
 
-پس از انتخاب از شما مقدار جدید ترافیک درخواست میشود و با مقدار عددی وارد نماید.
+After selecting, you will be prompted for the new traffic amount. Enter a numerical value.
 
-محاسبه بر اساس گیگابایت می باشد.
+The calculation is based on gigabytes.
 
 #### 5. Edit Expiration Days
 
-با استفاده از این گزینه میتوانید مقدار روز کاربر را تغییر دهید و پس از انتخاب از شما درخواست مقدار جدید میشود.
+Using this option, you can change the number of days the user's account is valid. After selecting, you will be prompted for the new value.
 
 #### 6. Renew Password
 
-پس انتخاب این گزینه پسورد جدیدی برای کاربر تولید یا جنیریت میشود.
+After selecting this option, a new password will be generated for the user.
 
-- نکته:
-درصورت تغییر پسورد کانفیگ کاربر از کار خواهد افتاد.
+*   **Note:** Changing the password will invalidate the user's configuration.
+* **Developer Note**: Important that config is tied to the password.
 
 #### 7. Renew Creation Date
 
-این گزینه مقدار تاریخ فعال سازی کاربر را بروزرسانی می کند با کلید `Edit Expiration Days` متفاوت است.
+This option updates the user's activation date.  This is different from the `Edit Expiration Days` button.
 
-بطور مثال شما کاربر را در تاریخ `17/12/2024` ساختید و اگر شما `30` روز برای کاربر تعیین کرده باشید بعنوان `Expiration Days` کاربر در تاریخ `17/01/2025` تمام میشود.
+For example, you created the user on `17/12/2024`, and if you set `30` days for the user as `Expiration Days`, the user will expire on `17/01/2025`.
 
-این گزینه تاریخ ساخت کاربر را به روز جاری بروزسانی میکنید.
+This option updates the user's creation date to the current day.
 
-به طور مثال کاربر شما روز و زمان تمام کرده اما هنوز مقدار حجم دارد با این گزینه میتوانید تاریخ ساخت را به روز جاری بروزرسانی کنید و کاربر دوباره با همان حجم باقی مانده اما با مقدار زمان و روز بروزسانی شده از کانفیگ خودش استفاده کند.
+For example, if your user has run out of days and time but still has some volume remaining, you can use this option to update the creation date to the current day, and the user can use their configuration again with the same remaining volume but with an updated time and day value.
+
+*   **Developer Note:** This is a crucial distinction.  `Edit Expiration Days` sets the *duration* of validity.  `Renew Creation Date` resets the *starting point* of that duration, effectively extending the validity period without changing the length of the period.  This is very useful for giving users more time without increasing their total allotted days.
 
 #### 8. Block User
 
-با این گزینه میتوانید کاربر را بلاک یا قطع کنید.
+With this option, you can block or disconnect the user.
 
-- مقدار `true` مساوی با قطع است.
+*   A value of `true` is equivalent to disconnected.
+*   A value of `false` is equivalent to connected.
 
-- مقدار `false` مساوی با وصل است.
-
----
-
-## حذف کاربر (Delete User)
-
-با انتخاب این گزینه از منو اصلی بات میتواند یک کاربر را حذف کنید
-
-پس از انتخاب از شما نام کاربری درخواست میشود و پس از ارسال نام کاربری صحیح کاربر حذف میشود.
+*   **Developer Note:**  Simple boolean toggle to enable/disable the user's access.
 
 ---
 
-## اطلاعات سرور (Server Info)
+## Delete User
 
-پس از انتخاب این گزینه مقدار اطلاعات سرور در قالب یک پیام برای شما ارسال میشود.
+By selecting this option from the main bot menu, you can delete a user.
+
+After selecting, you will be prompted for the username, and after sending the correct username, the user will be deleted.
+
+---
+
+## Server Info
+
+After selecting this option, the server information will be sent to you in a message.
 
 ```
 📈 CPU Usage: 6.2%
@@ -125,16 +128,17 @@
 💻 Used RAM: 345MB
 👥 Online Users: 2
 
-🚦Total Traffic: 
+🚦Total Traffic:
 🔼16.91 GB uploaded
 🔽239.35 GB downloaded
 ```
+* **Developer Note**: Basic system monitoring info and total traffic stats.
 
-## بکاپ (Backup Server)
+## Backup Server
 
-با انتخاب این گزینه از لیست فایل های زیر در قالب یک فایل `zip` بر اساس ساعت و روز برای شما ارسال میشود.
+By selecting this option, the following files will be sent to you in a `zip` file, based on the hour and day.
 
-``` shell
+```shell
 FILES_TO_BACKUP=(
     "/etc/hysteria/ca.key"
     "/etc/hysteria/ca.crt"
@@ -144,22 +148,20 @@ FILES_TO_BACKUP=(
 )
 ```
 
+*   **Developer Note:** This backs up the essential configuration files, including the CA key and certificate (critical for TLS), the user database, the main configuration file, and environment variables.  This is a very good practice for disaster recovery.
+
 ----
+## Search Users
+To enable user search in Telegram bot, you need to activate `Inline mode` by [`@BotFather`](https://t.me/BotFather)
 
-## جستجو کاربر (Search Users)
+How to activate:
+Open `botfather` and enter command `/mybots`.
+Select your bot and press `Bot Settings` button.
+Select `Inline Mode` and press `Turn On`.
 
-برای جستجو کاربر در ربات شما نیاز دارید تا از طریق [`@BotFather`](https://t.me/BotFather) گزینه `Inline mode` برای ربات فعال کنید.
-
-طریقه فعال سازی :
-
-بات `botfather` باز کنید کامند `mybots/` بزنید ربات مورد نظرتون انتخاب کنید
-بعد روی دکمه `Bot Settings` بزنید در منوی جدید دکمه `Inline Mode` انتخاب کنید و در نهایت این فیچر رو `Turn On` کنید 
-
-### ویدئو
+### Video
 
 <p align="center">
-<img src="../../Picture/telegram_search.gif" width="320" height="200">
+<img src="/Picture/telegram_search.gif" width="320" height="200">
 </p>
-
-
 

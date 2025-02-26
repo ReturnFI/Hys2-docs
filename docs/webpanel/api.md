@@ -1,5 +1,4 @@
-### صفحه مستندات API
-
+### API Documentation Page
 
 <p align="center">
  <img src="https://github.com/user-attachments/assets/b63c3d69-16f0-4744-96cf-b659e5419fd3" width="700" height="500">
@@ -7,17 +6,14 @@
 
 ---
 
-برای ورود به صفحه مستندات `API` پنل خود کافیه در انتهای آدرس پنل خود مقدار `docs` را وارد نمایید.
+To access the `API` documentation page of your panel, simply add `docs` to the end of your panel's address.
 
-مثال:
+Example:
 
 ```
 https://example.com:8443/31fcba9356712c6efdabc34be2563a78/docs
 ```
 
-برای استفاده از `API` پنل نیاز دارید به توکن تولید شده در زمان نصب که میتوانید از این [لینک](https://returnfi.github.io/Hys2-docs/menu/advance-menu/#8-web-panel) و توضیحات
+To use the panel's `API`, you need the token generated during installation.  You can find it and related instructions using this [link](https://returnfi.github.io/Hys2-docs/menu/advance-menu/#8-web-panel).
 
-توکن احزار هویت خود را دریافت نمایید.
-
- پس از دریافت توکن بر روی کلید سبز رنگ `Authorize` در سمت راست صفحه زده و مقدار توکن خود را در کادر `Value` وارد کرده و بر روی دکمه `Authorize` کلید نمایید.
-
+After obtaining the token, click the green `Authorize` button on the right side of the page, enter your token in the `Value` field, and click the `Authorize` button.

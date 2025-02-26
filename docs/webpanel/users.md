@@ -1,47 +1,29 @@
-### توضیحات صفحه کاربران
-
+### Users Page Description
 
 <p align="center">
  <img src="https://github.com/user-attachments/assets/1be823ef-97ed-44dc-aae9-51f2ab2f72e2" width="700" height="500">
 </p>
 
+On the user page, you can manage your users, which are listed.
 
-در صفحه کاربری میتوانید کاربران خود که به صورت لیست قرار گرفته اند را مدیریت کنید.
+#### Adding Users and Searching
 
+1.  Add User: To add a user, select the + button. In the opened page, enter the following values:
 
-#### افزودن کاربر و جستجو
+    *   Username: The user's name
+    *   Traffic Limit (GB): The user's data limit in gigabytes
+    *   Expiration Days: The user's duration in days (as a number)
 
-1. افزودن کاربر: 
-برای افزدون کاربر کلید + را انتخاب کنید در صفحه باز شده مقادیر زیر را وارد نمایید :
+2.  Search User: To search for a user, simply enter the username in the `Search` box.
 
-    - Username : نام کاربر
-    - Traffic Limit (GB) : مقدار حجم کاربر به گیگابایت
-    - Expiration Days : مقدار روز کاربر به عدد
+#### User Table Description
 
-
-
-2. جستجو کاربر :
-برای جستجوی کاربر کافیست نام کاربری را در کادر `Search` وارد نمایید.
-
-
-#### توضیحات جدول کاربران
-
-1. ردیف `status`:
-این ردیف نمایانگر آنلاین ، آفلاین یا غیرفعال بودن کاربر میباشد.
-2. ردیف `Username`:
-نمایش دادن نام کاربری
-3. ردیف `Quota`:
-مقدار حجم تعریف شده کاربر نمایش داده میشود.
-4. ردیف `Used`:
-مقدار حجم استفاده شده توسط کاربر نمایش داده میشود.
-5. ردیف `Expiry Date`:
-تاریخ و ساعت به اتمام رسیدن کاربر نمایش داده میشود.
-6. ردیف `Expiry Days`:
-مقدار روز تعریف شده کاربر نمایش داده میشود.
-7. ردیف `Enable`:
-فعال یا غیرفعال بودن کاربر را نمایش داده میشود.
-8. ردیف `Configs`:
-نمایش کانفیگ های کاربر که به صورت `qrcode` میباشد و برای دریافت لینک کافی است روی `qrcode` کلیک کرده تا کانفیگ یا لینک ساب کاربر کپی شود.
-9. ردیف `Actions`:
-شامل سه کلیک که به ترتیب : ویرایش - بازنشانی - حذف میباشد
-
+1.  `status` row: This row indicates whether the user is online, offline, or inactive.
+2.  `Username` row: Displays the username.
+3.  `Quota` row: Displays the user's defined data limit.
+4.  `Used` row: Displays the amount of data used by the user.
+5.  `Expiry Date` row: Displays the user's expiration date and time.
+6.  `Expiry Days` row: Displays the user's defined duration in days.
+7.  `Enable` row: Shows whether the user is enabled or disabled.
+8.  `Configs` row: Displays the user's configurations as a `qrcode`. To get the link, simply click on the `qrcode` to copy the user's configuration or subscription link.
+9.  `Actions` row: Includes three buttons, respectively: Edit - Reset - Delete.

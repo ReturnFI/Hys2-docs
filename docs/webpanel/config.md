@@ -1,11 +1,11 @@
-## توضیحات صفحه کانفیگ (Config)
+## Config Page Description
 
 <p align="center">
  <img src="https://github.com/user-attachments/assets/27a2ffbe-90cb-4081-b409-19cfc18b3edc" width="700" height="500">
 </p>
 
-در این صفحه کانفیگ اصلی هسته هیستریا2 برای شما به صورت `json` بارگزاری میشود که میتوانید در صورت داشتن دانش کافی مقادیر مورد نظر خود را وارد نمایید.
+On this page, the main configuration of the Hysteria2 core is loaded for you in `json` format, where you can enter your desired values if you have sufficient knowledge.
 
-دقت داشته باشید هرگونه تغییر در این صفحه باعث تغییر در فایل `config.json` هسته اصلی میشود که درصورت اشتباه وارد کردن باعث ایجاد اختلال یا متوقف شدن هسته اصلی میشود کاربران شما قطع خواهند شد.
+Be aware that any changes on this page will modify the `config.json` file of the main core.  Incorrectly entering values can cause disruptions or stop the main core, disconnecting your users.
 
-پس درصورت داشتن دانش فنی کافی از هسته هیستریا2 اقدام به تغییر مقادیر پیشفرض کنید.
+Therefore, only change the default values if you have sufficient technical knowledge of the Hysteria2 core.

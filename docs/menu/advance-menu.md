@@ -1,35 +1,38 @@
-# منو Advance
+# Advanced Menu
 
 ---
+
 <p align="center">
 
 <img src="https://github.com/user-attachments/assets/417cc9ce-d460-46c0-8e2f-0b163af41b29" width="700" height="400">
 </p>
 
-
-## توضیحات
+## Description
 ---
 
+### 1. Install TCP Brutal
 
-### 1. نصب TCP Brutal
+**What is TCP Brutal?**
 
-TCP Brutal چیست؟
-TCP Brutal یک الگوریتم کنترل ازدحام (congestion control) برای پروتکل TCP است. به زبان ساده‌تر، این الگوریتم سعی می‌کند تا سرعت انتقال داده‌ها در شبکه‌های TCP را افزایش دهد، به‌خصوص در شرایطی که پهنای باند محدود یا ناپایدار است. این کار با مدیریت هوشمندانه‌ی میزان داده‌هایی که در یک زمان مشخص ارسال می‌شود، انجام می‌شود.
+TCP Brutal is a congestion control algorithm for the TCP protocol.  In simpler terms, it attempts to increase data transfer speeds on TCP networks, especially in situations with limited or unstable bandwidth.  It achieves this by intelligently managing the amount of data sent at any given time.
 
----
-
-
-### 2. نصب وارپ
-
-وارپ (Warp) چیست؟
-وارپ یک سرویس ارائه شده توسط شرکت کلودفلر (Cloudflare) است که از پروتکل وایرگارد برای ایجاد یک تونل امن و سریع بین سرور شما و اینترنت استفاده می‌کند. به عبارت ساده‌تر، وارپ یک لایه امنیتی اضافی به اتصال شما اضافه می‌کند و باعث می‌شود ترافیک اینترنتی شما از طریق سرورهای کلودفلر عبور کند.
+*   **Note:** Congestion control algorithms are crucial for network performance.  TCP Brutal is likely a less common, potentially more aggressive algorithm compared to standard ones like Cubic or Reno.  It's important to understand the potential impact on network stability before deploying this.  It might be beneficial in high-latency or lossy networks.
 
 ---
 
+### 2. Install WARP
 
-### 3. تنظیمات وارپ (Configure WARP)
+**What is WARP?**
 
-این گزینه داری یک زیر منو دیگر میباشید :
+WARP is a service provided by Cloudflare that uses the WireGuard protocol to create a secure and fast tunnel between your server and the internet. Simply put, WARP adds an extra layer of security to your connection and routes your internet traffic through Cloudflare's servers.
+
+*   **Note:** This leverages WireGuard, a modern, high-performance VPN protocol.  The key benefit here is routing through Cloudflare's network, which can offer performance and security advantages (DDoS protection, potentially faster routing). It acts as a VPN, masking the user's original IP.
+
+---
+
+### 3. Configure WARP
+
+This option has a submenu:
 
 ```
 --------------------------------
@@ -52,28 +55,29 @@ Configure WARP Options:
 Select an option:
 ```
 
-- بخش اول نمایش کانفیگ وارپ میباشد.
-- گزینه `1` کل ترافیک از وارپ عبور کند.
-- گزینه `2`انتقال ترافیک سایت های عمومی مثال : google , chatgpt , netflix  
-- گزینه `3` انتقال ترافیک سایت های داخلی (ایران) از وارپ
-- گزینه `4` بلاک کردن سایت های بزرگسالان و محتوای بزرگسال
-- گزینه `5` تغییر پروفایل به وارپ پلاس
-    - نیازمند داشتن کلید وارپ پلاس
-- گزینه `6` تغییر پروفایل به حالت معمولی
-- گزینه `7` نمایش اطلاعات پرفایل وارپ و `IP` وارپ
-- گزینه `8` تغییر `IP` وارپ
+*   **First Section:** Displays the current WARP configuration.
+*   **Option 1:** Route all traffic through WARP. (Full VPN mode)
+*   **Option 2:** Route traffic for popular sites (e.g., Google, ChatGPT, Netflix) through WARP. (Selective routing)
+*   **Option 3:** Route traffic for domestic (Iranian) sites through WARP. (Geo-specific routing - important for bypassing potential local restrictions)
+    *   **Developer Note:** `geosite:ir` and `geoip:ir` likely refer to lists of Iranian websites and IP addresses, respectively.  This suggests the script uses GeoIP/Geosite databases for routing decisions.
+*   **Option 4:** Block adult content. (Content filtering)
+*   **Option 5:** Switch to a WARP Plus profile.
+    *   Requires a WARP Plus key. (This implies a paid tier with potentially better performance or features.)
+*   **Option 6:** Switch to a normal (free) WARP profile.
+*   **Option 7:** Display WARP profile information and the WARP IP address.
+*   **Option 8:** Change the WARP IP address. (Likely rotates to a new Cloudflare IP.)
 
 ---
 
-### 4. حذف وارپ (Uninstall WARP)
+### 4. Uninstall WARP
 
-با انتخاب این گزینه وارپ و تنظیمات وارپ از سرور حذف خواهد شد
+Selecting this option will remove WARP and its configuration from the server.
 
 ---
 
-### 5. ربات تلگرام (Telegram Bot)
+### 5. Telegram Bot
 
-این گزینه دارای زیر منو دیگر میباشد : 
+This option has a submenu:
 
 ```
 1. Start Telegram bot service
@@ -81,28 +85,27 @@ Select an option:
 0. Back
 ```
 
-- گزینه `1` فعال سازی ربات تگرام
-  - برای فعال سازی ربات تلگرام شما نیاز دارید که با استفاده از ربات `@BotFather` یک ربات ایجاد کنید و توکن ربات داشته باشید.
-  - با استفاده از ربات `@userinfobot` آیدی عددی حساب تلگرام خود رو بدست بیارید
-  - اگر چند حساب یا ادمین دارید میتونید از علامت `,` استفاده کنید و چند آیدی عدد وارد کنید.
+*   **Option 1:** Activate the Telegram bot.
+    *   To activate the bot, you need to create a bot using `@BotFather` and obtain a bot token.
+    *   Use `@userinfobot` to get the numerical ID of your Telegram account.
+    *   If you have multiple accounts or admins, you can use a comma (`,`) to enter multiple numerical IDs.
 
-مثال:
+    Example:
 
-```
-Enter the Telegram bot token: 9517664116:ABDcYVBVKJHUJCasVjwXtPyQw_eQW9bCl0
-Enter the admin IDs (comma-separated): 1562023210,1871475213
-``` 
+    ```
+    Enter the Telegram bot token: 9517664116:ABDcYVBVKJHUJCasVjwXtPyQw_eQW9bCl0
+    Enter the admin IDs (comma-separated): 1562023210,1871475213
+    ```
 
-- گزینه `2` حذف ربات تلگرام 
+    *   **Note:** This integrates Telegram bot functionality, likely for remote control, monitoring, or notifications related to the Hysteria server.  The token is the bot's API key, and the admin IDs control who can interact with the bot.
+
+*   **Option 2:** Remove the Telegram bot.
 
 ---
 
+### 6. SingBox SubLink
 
-
-### 6. ساب لینک سینگ باکس (SingBox SubLink)
-
-
-این گزینه دارای ساب منو زیر می باشد:
+This option has the following submenu:
 
 ```
 1. Start Singbox service
@@ -110,26 +113,18 @@ Enter the admin IDs (comma-separated): 1562023210,1871475213
 0. Back
 ```
 
-- گزینه `1` فعال سازی ساب سینگ باکس
-  - نیاز دارید به یک دامنه یا ساب دامنه برای فعال سازی ساب لینک
-  - انتخاب پورت برای فعال سازی ساب لینک
+* **Option 1:** Activate the SingBox subscription link.
+    * Requires a domain or subdomain to activate the subscription link.
+    * Allows you to choose a port for activating the subscription link.
+* **Option 2:** Deactivate the subscription and remove the certificate files related to the domain.
 
-- گزینه `2` غیرفعال سازی ساب و حدف فایل های `certificate` مربوط به دامنه
-
-
-<h5>
-نکته :
-</h5>
-
-- این ویژگی با استفاده از سرویس `certbot` برای دامنه `SSL certificate` دریافت میکند.
+**Note:** This feature uses the `certbot` service to obtain an SSL certificate for the domain.
 
 ---
 
+### 7. Normal-SUB SubLink
 
-### 7. ساب لینک معمولی (Normal-SUB SubLink)
-
-
-این گزینه دارای ساب منو زیر می باشد:
+This option has the following submenu:
 
 ```
 1. Start Normal-Sub service
@@ -137,26 +132,19 @@ Enter the admin IDs (comma-separated): 1562023210,1871475213
 0. Back
 ```
 
-- گزینه `1` فعال سازی ساب لینک معمولی  
-  - نیاز دارید به یک دامنه یا ساب دامنه برای فعال سازی ساب لینک
-  - انتخاب پورت برای فعال سازی ساب لینک
+*   **Option 1:** Activate the normal subscription link.
+    *   Requires a domain or subdomain to activate the subscription link.
+    *   Allows you to choose a port for activating the subscription link.
 
-- گزینه `2` غیرفعال سازی ساب و حدف فایل های `certificate` مربوط به دامنه
+*   **Option 2:** Deactivate the subscription and remove the certificate files related to the domain.
 
-
-<h5>
-نکته :
-</h5>
-
-- این ویژگی با استفاده از سرویس `certbot` برای دامنه `SSL certificate` دریافت میکند.
+**Note:** This feature uses the `certbot` service to obtain an SSL certificate for the domain.
 
 ---
 
+### 8. Web Panel
 
-### 8. پنل وب (Web Panel)
-
-
-بعد از انتخاب این گزینه زیر منو زیر برای شما اجرا میشود
+After selecting this option, the following submenu will be displayed:
 
 ```
 Services Status:
@@ -170,96 +158,83 @@ hysteria-caddy.service: Inactive
 0. Back
 ```
 
+*   **Services Status:** Indicates whether the web panel services are active or inactive.
 
-- بخش Services Status نمایان گر فعال یا غیر فعال بودن سرویس های وب پنل میباشد.
+**Note:** The web panel uses the `caddy` service. If you have other services like `nginx` or `apache`, the web panel may encounter issues.
 
-<h5>
- نکته : 
-</h5>
+*   **Note:**  This is a crucial point.  `caddy`, `nginx`, and `apache` are all web servers, and they often conflict if they try to use the same ports (usually 80 and 443).  This warns the user to avoid conflicts.
 
- پنل وب از سرویس `caddy` استفاده میکند در صورت داشتن سرویس های دیگر مانند `nginx` و `apache` ممکن است وب پنل با مشکل مواجعه شود
+1.  **Start WebPanel service:**
 
+    After selecting this option, you will be prompted for the following values, in order:
 
-1.راه اندازی پنل وب (Start WebPanel service)
+    *   **Enter the domain name for the SSL certificate:**
 
+        Enter your domain or subdomain name without `https://`.
 
-پس از انتخاب این گزینه  به ترتیب از شما مقادیر زیر را میخواهد:
+    *   **Enter the port number for the service:**
 
-- Enter the domain name for the SSL certificate
+        After entering the domain, you will be asked for the port number to run the web panel service.
 
-مقدار دامنه یا ساب دامنه خود را بدون `https://` وارد نمایید
+        Use non-standard and unused ports, for example, `8443`.
 
+    *   **Enter the admin username:**
 
-- Enter the port number for the service
+        Enter the administrator username.
 
-بعد وارد کردن دامنه از شما مقدار پورت برای راه اندازی سرویس پنل وب را میخواهد 
+    *   **Enter the admin password:**
 
-از پورت های غیر اصلی و خالی استفاده نمایید به طور مثال `8443`
+        Enter a password for the administrator (use a strong password).
 
+    Then, wait a few minutes for the necessary packages and services to be installed. Finally, the panel login address will be displayed as follows:
 
-- Enter the admin username
+    ```
+    Hysteria web panel is now running.
+    The service is accessible on: https://example.com:8443/8b3dc8o7w4d5djg77t85r7c84e8assvc/
+    ```
+    * **Note:** The random string at the end of the URL (`8b3dc8o7w4d5djg77t85r7c84e8assvc/`) is likely a security measure to prevent unauthorized access to the panel. It's a good practice.
 
-مقدار نام کاربری ادمین را وارد نماید
+2.  **Stop WebPanel service:**
 
+    After selecting this option, the web panel service will be deactivated and removed.
 
-- Enter the admin password
+3.  **Get WebPanel URL:**
 
-مقدار پسورد برای ادمین را وارد نمایید (از پسورد های قوی استفاده نمایید)
+    If needed, you can get the panel login address with this option.
 
-سپس چند دقیقه صبر نمایید که پکیج ها و سرویس های مورد نظر نصب شوند و در انتها آدرس ورود به پنل برای شما به شکل زیر نمایش داده میشود
+4.  **Show API Token:**
 
-```
-Hysteria web panel is now running. 
-The service is accessible on: https://example.com:8443/8b3dc8o7w4d5djg77t85r7c84e8assvc/
-```
+    If you want to use the API designed for the panel, you need to authenticate using a token.
 
-2.غیر فعال سازی سرویس پنل وب (Stop WebPanel service)
+    This option displays the API token for your panel.
 
-بعد از انتخاب این گزینه سرویس پنل وب غیرفعال و حذف میشود.
-
-
-3.دریافت آدرس پنل (Get WebPanel URL)
-
-در صورت نیاز میتواند آدرس ورود به پنل را با این گزینه دریافت کنید.
-
-
-4.نمایش توکن (Show API Token)
-
-در صورتی که خواستید از API طراحی شده برای پنل استفاده کنید باید با استفاده از توکن احراز هویت را انجام دهید.
-
-این گزینه مقدار توکن API پنل شما را نمایش میدهد.
-
-
+    *   **Note:**  Having an API is excellent for automation and integration with other systems.  Token-based authentication is standard practice for API security.
 
 ---
 
+### 9. Change Port (Hysteria2)
 
-### 9. تغییر پورت (Change Port Hysteria2)
+After selecting this option, you will be prompted for a new port.
 
+This port is for the main `Hysteria2` service, and if changed, users need to update their configurations.
 
-بعد از انتخاب این گزینه از شما درخواست پورت جدید میشود.
-
-این پورت مربوط به سرویس اصلی `Hysteria2` میباشد و در صورت تغییر نیاز هست که کاربران کانفیگ خود را بروزرسانی کنند.
-
----
-
-
-
-### 10. تغییر SNI (Change SNI Hysteria2)
-
-
-با استفاده از این گزینه شما میتوانید `SNI` خود را که در هنگام نصب انتخاب کرده اید را تغییر دهید.
-
-دقت داشته باشید با تغییر `SNI` مقادیر `pinSHA256` در فایل `config.json` تغییر خواهد کرد و در صورت قطع شدن کاربران باید دوباره کانفیگ دریافت کنن.
+*   **Note:**  This is the core port that Hysteria2 listens on for client connections.  Changing it requires client-side updates.
 
 ---
 
+### 10. Change SNI (Hysteria2)
 
-### 11. مدیریت مبهم سازی (Manage OBFS)
+Using this option, you can change the `SNI` you selected during installation.
 
+Be aware that changing the `SNI` will change the `pinSHA256` values in the `config.json` file, and if users are disconnected, they need to get the configuration again.
 
-این گزینه داری زیر منو زیر میباشد:
+*   **Note:**  SNI (Server Name Indication) is used in TLS to allow a server to present multiple certificates on the same IP address and port.  Changing the SNI affects the TLS handshake.  `pinSHA256` is likely a certificate pinning mechanism, adding an extra layer of security by verifying the server's certificate against a known hash.
 
+---
+
+### 11. Manage OBFS
+
+This option has the following submenu:
 
 ```
 1. Remove Obfs
@@ -267,41 +242,32 @@ The service is accessible on: https://example.com:8443/8b3dc8o7w4d5djg77t85r7c84
 0. Back
 ```
 
-- گزینه `1. Remove Obfs` برای حذف قسمت `obfs` از فایل `config.json` میباشد،
-بعضی از نرم افزار ها از `obfs` پشتیبانی نمیکنند.
+*   **Option 1. Remove Obfs:** Removes the `obfs` section from the `config.json` file.  Some software does not support `obfs`.
 
-<h5>
-نکته :
-</h5>
+    **Note:** It is recommended not to remove `obfs`.
 
-توصیه میشود `obfs` را حذف نکنید.
+    ```json
+      "obfs": {
+        "type": "salamander",
+        "salamander": {
+          "password": "qyZE9t4VpqgblQCBtbjIBjdFByEe3AIK"
+        }
+      }
+    ```
 
-``` json
-  "obfs": {
-    "type": "salamander",
-    "salamander": {
-      "password": "qyZE9t4VpqgblQCBtbjIBjdFByEe3AIK"
-    }
-```
+    *   **Note:**  `obfs` stands for obfuscation.  This is a technique to make the VPN traffic look like something else (in this case, "salamander" is likely a specific obfuscation method) to evade detection by firewalls or DPI (Deep Packet Inspection).  The password is used in the obfuscation process.
 
+*   **Option 2. Generating new Obfs:** Activate and regenerate `obfs`.
 
-- گزینه `2. Generating new Obfs` فعال سازی و دریافت دوباره `obfs`
+    **Note:** If you remove `obfs` and reactivate it, the values in the `password` section will change, and users need to get the configuration again.
 
-<h5>
-نکته :
-</h5>
+---
 
-درصورت حذف `obfs` و فعال سازی دوباره مقادیر بخش `password` تغییر خواهد کرد و نیاز است دوباره کاربر کانفیگ دریافت نماید.
+### 12. Change IPs (4-6)
 
-----
+If you are using IP tunneling or floating, you can use this option to change the `IP` values of your configurations.
 
-
-### 12. تغییر آدرس ای پی (Change IPs 4-6 )
-
-
-درصورتی که از تانلینگ یا فلوتینگ `IP` استفاده میکنید میتوانید از این گزینه استفاده کنید و مقادیر `IP` کانفیگ های خود را تغییر دهید.
-
-این گزینه داری زیر منو زیر میباشد:
+This option has the following submenu:
 
 ```
 1. Change IP4
@@ -309,19 +275,18 @@ The service is accessible on: https://example.com:8443/8b3dc8o7w4d5djg77t85r7c84
 0. Back
 ```
 
-- گزینه `1` تغییر `IP` ورژن `4` کانفیگ ها
-- گزینه `2` تغییر `IP` ورژن `6` کانفیگ ها
+*   **Option 1:** Change the IPv4 address in the configurations.
+*   **Option 2:** Change the IPv6 address in the configurations.
 
+*   **Note:** This allows for updating the IP addresses used for tunneling, which is essential if the server's IP changes or if you're using a floating IP setup.
 
 ---
 
+### 13. Update geo Files
 
-### 13. بروزرسانی فایل های GEO (Update geo Files)
+`geo` files are used for better routing and traffic control.
 
-
-فایل های `geo` برای مسیریابی بهتر و کنترل ترافیک استفاده میشوند.
-
-این گزینه دارای زیر منو زیر میباشد:
+This option has the following submenu:
 
 ```
 Configure Geo Update Options:
@@ -332,58 +297,54 @@ Configure Geo Update Options:
 0. Cancel
 ```
 
-- گزینه `1` با استفاده از پروژه [`Chocolate4U`](https://github.com/Chocolate4U/Iran-v2ray-rules) فایل های `geoip.dat` و `geosite.dat` بروزرسانی میکند.
-- گزینه `2` با استفاده از پروژه [`Loyalsoldier`](https://github.com/Loyalsoldier/) فایل های `geoip.dat` و `geosite.dat` بروزرسانی میکند این پروژه مربوط به `geo`  سایت های داخلی چین میباشد و برای ایران کارای ندارد.
-- گزینه `3` با استفاده از پروژه [`runetfreedom`](https://github.com/runetfreedom/) فایل های `geoip.dat` و `geosite.dat` بروزرسانی میکند این پروژه مربوط به `geo`  سایت های داخلی روسیه میباشد و برای ایران کارای ندارد.
-- گزینه `4` نمایش حجم و آخرین تاریخ و ساعت تغییر فایل های `geo`
+*   **Option 1:** Updates `geoip.dat` and `geosite.dat` using the [`Chocolate4U`](https://github.com/Chocolate4U/Iran-v2ray-rules) project.
+*   **Option 2:** Updates `geoip.dat` and `geosite.dat` using the [`Loyalsoldier`](https://github.com/Loyalsoldier/) project. This project is for GeoIP/Geosite data for Chinese websites and is not useful for Iran.
+*   **Option 3:** Updates `geoip.dat` and `geosite.dat` using the [`runetfreedom`](https://github.com/runetfreedom/) project. This project is for GeoIP/Geosite data for Russian websites and is not useful for Iran.
+*   **Option 4:** Displays the size and last modified date and time of the `geo` files.
+
+*   **Note:**  This is crucial for geo-based routing.  `geoip.dat` and `geosite.dat` are commonly used files (likely in MaxMind's format) that contain IP address to location mappings and domain to country mappings, respectively.  The different projects provide curated lists for specific regions. Keeping these files updated is important for accurate routing.
 
 ---
 
-### 14. مدیریت استتار (Manage Masquerade)
+### 14. Manage Masquerade
 
-یکی از کلیدهای تقویت کننده Hysteria در برابر سانسور، توانایی آن در وانمود کردن به عنوان ترافیک استاندارد HTTP/3 است. این بدان معناست که بسته‌ها نه تنها برای تجهیزات میانی به‌صورت HTTP/3 دیده می‌شوند، بلکه سرور نیز به درخواست‌های HTTP مانند یک سرور وب معمولی پاسخ می‌دهد. با این حال، این به این معناست که سرور شما باید واقعاً محتوایی را ارائه دهد تا برای سانسورچیان احتمالی واقعی به نظر برسد.
+One of Hysteria's key strengths in resisting censorship is its ability to pretend to be standard HTTP/3 traffic. This means that not only are packets seen as HTTP/3 by intermediary equipment, but the server also responds to HTTP requests like a normal web server. However, this means that your server must actually serve content to appear legitimate to potential censors.
 
-**نکته:**
-ما از روش پروکسی استفاده میکنم و به عنوان یک پروکسی معکوس عمل می‌کند و محتوای یک وب‌سایت دیگر را ارائه می‌دهد.
+**Note:** We use the proxy method, which acts as a reverse proxy and serves content from another website.
 
-
-این گزینه دارای یک زیر منو میباشید:
+This option has a submenu:
 
 ```
 1. Enable Masquerade
 2. Remove Masquerade
 0. Back
 ```
+* **Option 1:** Enable masquerade.
+  - You need the domain of a site, like the SNI you are using, for activation.
+* **Option 2:** Disable masquerade.
 
-- گزینه `1` فعال کردن استتار
-    - برای فعال سازی نیاز به دامنه یک سایت مانند `SNI` که استفاده میکنید دارید
-
-- گزینه `2` غیرفعال سازی استتار
-
-
----
-
-
-### 15. راه اندازی مجدد (Restart Hysteria2)
-
-با استفاده از این گزینه میتوانید سرویس Hysteria2 را ریستارت کنید.
-
-تفاوت این گزینه با دستور مستقیم `systemctl restart hysteria-server.service` در جمع آوری ترافیک اخرین لحظه کاربران قبل از ریستارت است.
-
-درصورتی که از دستور `systemctl restart hysteria-server.service` استفاده کنید ترافیک لحظه ای کاربر ذخیره نمیشود و بهتر است از داخل منو اقدام به راه اندازی سرویس کنید.
+*   **Note:** This is a sophisticated anti-censorship technique.  By acting as a reverse proxy, Hysteria makes its traffic look like regular web browsing to a legitimate website.  This makes it very difficult for censors to block without also blocking the masqueraded website.
 
 ---
 
+### 15. Restart Hysteria2
 
-### 16. بروزرسانی هسته (Update Core Hysteria2)
+Using this option, you can restart the Hysteria2 service.
 
+The difference between this option and the direct command `systemctl restart hysteria-server.service` is in collecting the last-minute traffic of users before restarting.
 
-پس از اجرای این گزینه هسته `Hysteria2` به آخرین ورژن بروزرسانی خواهد شد.
+If you use the `systemctl restart hysteria-server.service` command, the user's instantaneous traffic is not saved, and it is better to restart the service from within the menu.
+
+*   **Note:** This highlights a crucial detail: the script's restart function likely handles graceful shutdown and data persistence (saving traffic statistics) better than a raw `systemctl` command.
 
 ---
 
+### 16. Update Core (Hysteria2)
 
-### 17. حذف اسکریپت (Uninstall Hysteria2)
+After running this option, the `Hysteria2` core will be updated to the latest version.
 
+---
 
-پس از انتخاب این گزینه کل سرویس ها و فایل مربوط به اسکریپت و هسته حذف خواهند شد.
+### 17. Uninstall Script (Hysteria2)
+
+After selecting this option, all services and files related to the script and core will be removed.

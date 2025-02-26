@@ -1,29 +1,25 @@
-# منو Hysteria2
+# Hysteria2 Menu
 ---
 <p align="center">
-در این منو شما امکان مدیریت کاربران رو دارید.
+In this menu, you can manage users.
 <br>
 
-<img src="../../Picture/hysteria2menu.png">
+<img src="/Picture/hysteria2menu.png">
 </p>
 
-### توضیحات منو
+### Menu Description
 
+### 1. Install and Configure Hysteria2
+The first option is for installing the core and setting up Hysteria2, which was already completed during installation, so there is no need to reinstall.
 
-### 1. نصب (Install and Configure Hysteria2)
-گزینه یک مربوط به نصب هسته و راه اندازی است که در مرحله نصب انجامش دادیم و دیگر نیازی به نصب دوباره نیست.
+---
 
+### 2. Add User
 
-----
-
-
-### 2. افزودن کاربر (Add User)
-
-
-- پس از انتخاب گزینه `2` از شما نام کاربری رو میخواد که با حروف و اعداد میتونید وارد کنید
-از کارکتر های غیراز حروف انگلیسی و اعداد استفاده نکنید.
-- در مرحله بعد مقدار ترافیک کاربر رو با اعداد و بر اساس گیگبایت وارد کنید
-- در مرحله سوم مقدار روز برای انقضا کاربر را با اعداد انتخاب کنید به طور مثال `30` روز که معادل یک ماه میباشد
+- After selecting option `2`, you will be prompted to enter a username using only letters and numbers.  
+  **Do not use non-English characters or special symbols.**  
+- Next, enter the user's traffic limit in gigabytes.  
+- Finally, specify the number of days before expiration (e.g., `30` for one month).  
 ```
 Enter the username: return
 Enter the traffic limit (in GB): 30
@@ -32,18 +28,15 @@ User return added successfully.
 ```
 ---
 
+### 3. Edit User
 
-### 3. ویرایش کاربر (Edit User)
-
-
-- پس از انتخاب گزینه `3` از شما نام کاربری میخواد 
-- انتخاب نام کاربر جدید
-- انتخاب ترافیک جدید
-- انتخاب مقدار روز انقضا جدید
-- بروزرسانی پسورد جدید 
-- بروزرسانی تاریخ ایجاد کاربر
-- مسدود کردن کاربر
-
+- Enter the username you want to edit.  
+- Set a new username.  
+- Set a new traffic limit.  
+- Set a new expiration period.  
+- Update the user's password.  
+- Update the user’s creation date.  
+- Block the user if necessary.  
 
 ```
 Enter the username you want to edit: return
@@ -55,38 +48,30 @@ Do you want to generate a new creation date? (y/n): n
 Do you want to block the user? (y/n): n
 ```
 
-<h5>
-نکته : 
-</h5>
+**Notes:**
 
-- مواردی که `leave empty to keep the current` دارن میتوانید بدون دادن مقادیر بزارید تا مقدار قبلی بدون تغییر باقی بماند
-- مواردی که `(y/n)` دارن میتونید با زدن `n` بعنوان مخفف `no` رد بشید و مقادیر بدون تغییر بزارید
-- در صورت تغییر نام کاربری و پسورد نیاز هستش که دوباره به کاربر اشتراک بدید و اشتراک قبلی کاربر قطع خواهد شد
+- Fields labeled **"leave empty to keep the current"** can be skipped to retain previous values.  
+- Options marked with **(y/n)** allow skipping by entering `n` (no).  
+- If the username or password is changed, a new subscription must be provided, as the old one will be invalid.  
 
 ---
 
+### 4. Reset User
 
-### 4. ریست کاربر (Reset User)
-
-
-بعد از انتخاب گزینه ریست کاربر مقدار نام کاربری را وارد کنید سپس کاربر ریست میشود
-این گزینه درصورتی استفاده میشود که کاربر روز یا حجمش به اتمام رسیده و میخواد دوباره همان مقدار قبلی کاربر بروزرسانی کنید تا دوباره متصل شود.
+After selecting **Reset User**, enter the username to reset their data.  
+This option is used when a user's time or traffic is exhausted, allowing them to retain the same limits and reconnect.
 
 ---
 
+### 5. Remove User
 
-### 5. حذف کاربر (Remove User)
-
-
-بعد از انتخاب گزینه حذف کاربر نام کاربری کاربر مورد نظر وارد نمایید تا حذف شود.
+After selecting **Remove User**, enter the username to delete the user from the system.
 
 ---
 
+### 6. Get User
 
-### 6. نمایش کاربر (Get User)
-
-
-بعد از انتخاب گزینه نمایش کاربر نام کاربری وارد کنید و اطلاعات کاربر به صورت زیر میتونید دریافت کنید.
+After selecting **Get User**, enter a username to retrieve their details.
 
 ```
 Enter the username: return
@@ -102,11 +87,9 @@ Status:           Offline
 
 ---
 
+### 7. List Users
 
-### 7. لیست کاربران (List Users)
-
-
-بعد از انتخاب گزینه لیست کاربران به شما لیست کل کاربران نمایش  داده میشود :
+After selecting **List Users**, the entire user list will be displayed:
 
 ```
 Username             Traffic Limit (GB)   Expiration (Days) Creation Date        Password                       Blocked
@@ -115,12 +98,12 @@ return               30                   30              2025-01-14           e
 hys2                 50                   30              2024-12-10           qAuwQ3b9kVsjoCHi9DtslWjtq9JMUbj4 true
 ```
 
+
 ---
 
+### 8. Check Traffic Status
 
-### 8. نمایش ترافیک(Check Traffic Status)
-
-بعد از انتخاب گزینه نمایش ترافیک مصرف دانلود و آپلود هر کاربر به صورت زیر نمایش داده میشود :
+After selecting **Check Traffic Status**, the upload and download usage for each user will be displayed:
 
 ```
 Traffic Data:
@@ -133,19 +116,14 @@ return          554.52MB        19.19GB         Online
 -------------------------------------------------
 hys2            4.82GB          143.71GB        Offline
 -------------------------------------------------
-
 ```
 
 ---
 
+### 9. Show User URI
 
-### 9. نمایش کانفیگ (Show User URI)
+After selecting **Show User URI**, enter a username to display their **IPv4** and **IPv6** configuration, along with a **QR code** for the configuration.
 
+**Notes:**
 
-بعد از انتخاب نمایش کانفیگ از شما مقدار نام کاربری میخواد که بعد از وارد کردن 
- `IPv4` و `IPv6` کانفیگ و `qrcode` کانفیگ هارو نمایش میدهد.
-
-نکته : 
-
-- درصورت فعال بودن ساب لینک ها در انتها مقدار ساب لینک کاربر را هم نمایش خواهد داد.
-
+- If sub-links are enabled, the user's subscription link will also be displayed at the end.

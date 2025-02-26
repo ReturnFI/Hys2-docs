@@ -4,29 +4,28 @@
 
 ----
 
-### آموزش فعال سازی
+### Activation Tutorial
 
-برای فعال سازی پنل وب آموزش این [لینک](https://returnfi.github.io/Hys2-docs/menu/advance-menu/#8-web-panel) را مطالعه کنید.
-
+To activate the web panel, read this [link](https://returnfi.github.io/Hys2-docs/menu/advance-menu/#8-web-panel).
 
 ----
 
-### توضیحات صفحه اصلی
+### Main Page Description
 
-بعد از ورود و وارد کردن رمز و پسورد ادمین وارد داشبورد پنل وب میشوید.
+After logging in and entering the admin password, you will enter the web panel dashboard.
 
-داشبورد اصلی دارای 8 باکس مختلف میباشد که نمایانگر 
+The main dashboard has 8 different boxes that represent:
 
-1. مقدار `CPU` در حال استفاده
-2. مقدار `RAM` درحال استفاده
-3. کل ترافیک مصرفی
-4. تعداد کاربران آنلاین
+1.  `CPU` usage
+2.  `RAM` usage
+3.  Total traffic consumption
+4.  Number of online users
 
-باکس های پایین برای سرویس های فعال یا غیرفعال پنل شما میباشند که در صورت فعال سازی سرویس با باکس سبز و در صورت غیرفعال بودن سرویس با باکس قرمز نمایان میشوند.
+The boxes below are for active or inactive services of your panel, which are displayed with a green box if the service is active and with a red box if the service is inactive.
 
-1. هسته اصلی هستریا2
-2. بات تلگرام
-3. ساب سینگ باکس
-4. ساب معمولی
+1.  Hysteria2 core
+2.  Telegram bot
+3.  Sing-box sub
+4.  Regular sub
 
 ---

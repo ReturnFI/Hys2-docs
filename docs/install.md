@@ -1,41 +1,40 @@
+## Description
+---
+It is recommended to update the server packages and services before installation using the following command:  
 
-## توضیحات
---- 
-توصیه میشه قبل از نصب پکیج ها و سرویس های سرور را با دستورات `apt update && apt upgrade -y` بروزرسانی کنید.
+```bash
+apt update && apt upgrade -y
+```
 
+## Installation Command
+---
+Run the following command:  
 
-
-## دستور نصب
---- 
-
-``` bash
+```bash
 bash <(curl https://raw.githubusercontent.com/ReturnFI/Hysteria2/main/install.sh)
 ```
 
-کمی صبور باشید تا سرویس های و پکیچ های مورد نظر برای اجرای اسکریپت نصب بشن.
+Please be patient while the required services and packages are installed for the script to run.
 
-پس از نصب کامل شما وارد منو میشید
-سپس باز زد دکمه `1` وارد منو `Hysteria2 Menu` شوید و گزینه `Install and Configure Hysteria2`
-با زدن عدد `1` انتخاب کنید.
+Once the installation is complete, you will enter the menu.  
+Press `1` to access the `Hysteria2 Menu`, then select the `Install and Configure Hysteria2` option by pressing `1`.
 
-سپس از شما `sni` میخواد که میتونید با زدن اینتر رد بشید و از `sni` پیشفرض پنل استفاده کنید.
+Next, you will be asked to enter an `SNI`.  
+You can skip this step by pressing Enter to use the panel's default `SNI`.
 
-درصورتی که خواستید از `sni` مورد نظر خودتون استفاده کنید با فرمت زیر وارد کنید:
+If you prefer to use your own `SNI`, enter it in the following format:  
 
-مثال:
-`bing.com`
+Example:  
+`bing.com`  
 
-از زدن `https://` و هرگونه `/` خودداری کنید.
+Avoid using `https://` or any `/` characters.  
+The correct format for entering `SNI` is as shown in the example.
 
-فرمت صحیح وارد کردن `sni` مطابق مثال گفته شده هستش.
-
-بعد از وارد کردن `sni` سپس از شما مقدار `port` برای فعال سازی میخواد
-هر پورتی که مدنظر داشتین میتونید استفاده کنید به طور مثال :
+After entering the `SNI`, you will be asked to specify a `port` for activation.  
+You can use any port of your choice. For example:  
 `1433`
 
-
-
-## ویدئو
+## Video
 ---
 <p align="center">
 <img src="../Picture/install.gif">
