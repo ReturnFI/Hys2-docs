@@ -1,5 +1,5 @@
 site_name: Hysteria2
-
+site_url: https://returnfi.github.io/Hys2-docs/
 theme:
   name: material
   logo: img/logo.png
