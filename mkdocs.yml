@@ -31,8 +31,8 @@ theme:
         icon: material/weather-sunny
         name: Switch to system preference
 
-repo_name: ReturnFI/Hysteria2
-repo_url: https://github.com/ReturnFI/Hysteria2/
+repo_name: ReturnFI/Blitz
+repo_url: https://github.com/ReturnFI/Blitz/
 
 plugins:
   - search:
@@ -44,11 +44,11 @@ plugins:
           default: true
           name: English
           build: true
-          site_name: Hysteria2 Documentation 
+          site_name: Blitz Documentation 
         - locale: fa
           name: پارسی
           build: true
-          site_name: مستندات Hysteria2
+          site_name: مستندات Blitz
           nav:
             - صفحه اصلی: index.md
             - شروع:
@@ -71,7 +71,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/ReturnFI/Hysteria2/
+      link: https://github.com/ReturnFI/Blitz/
     - icon: fontawesome/brands/telegram
       link: https://t.me/hysteria2_panel
 

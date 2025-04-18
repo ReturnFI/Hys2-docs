@@ -9,7 +9,7 @@
 --- 
 
 ``` bash
-bash <(curl https://raw.githubusercontent.com/ReturnFI/Hysteria2/main/install.sh)
+bash <(curl https://raw.githubusercontent.com/ReturnFI/Blitz/main/install.sh)
 ```
 
 کمی صبور باشید تا سرویس های و پکیچ های مورد نظر برای اجرای اسکریپت نصب بشن.

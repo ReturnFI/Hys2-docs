@@ -11,7 +11,7 @@ apt update && apt upgrade -y
 Run the following command:  
 
 ```bash
-bash <(curl https://raw.githubusercontent.com/ReturnFI/Hysteria2/main/install.sh)
+bash <(curl https://raw.githubusercontent.com/ReturnFI/Blitz/main/install.sh)
 ```
 
 Please be patient while the required services and packages are installed for the script to run.
