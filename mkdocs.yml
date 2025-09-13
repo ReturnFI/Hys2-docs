@@ -1,4 +1,4 @@
-site_name: Hysteria2
+site_name: Blitz Panel
 site_url: https://returnfi.github.io/Blitz-docs/
 theme:
   name: material
@@ -132,4 +132,5 @@ markdown_extensions:
 
 extra_css:
   - 'stylesheets/extra.css'
+
 
