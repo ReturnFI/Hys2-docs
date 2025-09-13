@@ -1,5 +1,5 @@
 site_name: Hysteria2
-site_url: https://returnfi.github.io/Hys2-docs/
+site_url: https://returnfi.github.io/Blitz-docs/
 theme:
   name: material
   logo: img/logo.png
@@ -132,3 +132,4 @@ markdown_extensions:
 
 extra_css:
   - 'stylesheets/extra.css'
+
