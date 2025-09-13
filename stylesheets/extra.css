@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: vazir;
+    src: url("../fonts/Vazir-Medium-FD.woff2");
+}
+
+body {
+    font-family: vazir;
+}
+
+[lang="en"] body, 
+[lang="en"] * {
+    font-family: "Inter", sans-serif !important;
+}
+
+::-webkit-input-placeholder {
+    font-family: vazir;
+}
+::-moz-placeholder {
+    font-family: vazir;
+}
+:-ms-input-placeholder {
+    font-family: vazir;
+}
+::placeholder {
+    font-family: vazir;
+}

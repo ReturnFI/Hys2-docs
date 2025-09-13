@@ -1,0 +1,1945 @@
+
+<!doctype html>
+<html lang="fa" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://returnfi.github.io/Blitz-docs/fa/cli/">
+      
+      
+        <link rel="prev" href="../webpanel/api/">
+      
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>مستندات CLI - مستندات Blitz</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="rtl" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hysteria2-cli" class="md-skip">
+          پرش به محتویات
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="سرتیتر">
+    <a href="../" title="مستندات Blitz" class="md-header__button md-logo" aria-label="مستندات Blitz" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مستندات Blitz
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              مستندات CLI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="انتخاب زبان">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../cli/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="fa" class="md-select__link">
+              پارسی
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="جستجو" placeholder="جستجو" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="جستجو">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="هم‌رسانی" aria-label="هم‌رسانی" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="بازنشانی" aria-label="بازنشانی" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            راه‌اندازی جستجو
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ReturnFI/Blitz/" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReturnFI/Blitz
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="هدایت" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="مستندات Blitz" class="md-nav__button md-logo" aria-label="مستندات Blitz" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    مستندات Blitz
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ReturnFI/Blitz/" title="رفتن به مخزن" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ReturnFI/Blitz
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    صفحه اصلی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    شروع
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            شروع
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    نصب
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisite/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    پیش نیاز ها
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    منو ها
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            منو ها
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../menu/main-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    منو اصلی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../menu/hysteria2menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    منو (Hysteria2)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../menu/advance-menu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    منو (Advance)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../telegrambot/telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    بات تلگرام
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    پنل وب
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            پنل وب
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webpanel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    صفحه اصلی
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webpanel/users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    صفحه کابران
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webpanel/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    صفحه تنظیمات
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webpanel/config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    صفحه کانفیگ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../webpanel/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    مستندات API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    مستندات CLI
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    مستندات CLI
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      مدیریت Hysteria2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="مدیریت Hysteria2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      install-hysteria2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uninstall-hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      uninstall-hysteria2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      update-hysteria2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart-hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      restart-hysteria2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-hysteria2-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      change-hysteria2-port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-hysteria2-sni" class="md-nav__link">
+    <span class="md-ellipsis">
+      change-hysteria2-sni
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-hysteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      backup-hysteria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      restore-hysteria2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      مدیریت کاربر
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="مدیریت کاربر">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      list-users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-user
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      add-user
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      edit-user
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      reset-user
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove-user
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-user-uri" class="md-nav__link">
+    <span class="md-ellipsis">
+      show-user-uri
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      مدیریت سرور
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="مدیریت سرور">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traffic-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      traffic-status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      server-info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manage_obfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      manage_obfs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip-address
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-geo" class="md-nav__link">
+    <span class="md-ellipsis">
+      update-geo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masquerade" class="md-nav__link">
+    <span class="md-ellipsis">
+      masquerade
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      منوی پیشرفته
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="منوی پیشرفته">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-tcp-brutal" class="md-nav__link">
+    <span class="md-ellipsis">
+      install-tcp-brutal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-warp" class="md-nav__link">
+    <span class="md-ellipsis">
+      install-warp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uninstall-warp" class="md-nav__link">
+    <span class="md-ellipsis">
+      uninstall-warp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-warp" class="md-nav__link">
+    <span class="md-ellipsis">
+      configure-warp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warp-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      warp-status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      telegram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      singbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-sub" class="md-nav__link">
+    <span class="md-ellipsis">
+      normal-sub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webpanel" class="md-nav__link">
+    <span class="md-ellipsis">
+      webpanel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-webpanel-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-webpanel-url
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-webpanel-api-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-webpanel-api-token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-webpanel-services-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-webpanel-services-status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-services-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-services-status
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="فهرست موضوعات">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      فهرست موضوعات
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      مدیریت Hysteria2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="مدیریت Hysteria2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      install-hysteria2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uninstall-hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      uninstall-hysteria2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      update-hysteria2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart-hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      restart-hysteria2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-hysteria2-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      change-hysteria2-port
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-hysteria2-sni" class="md-nav__link">
+    <span class="md-ellipsis">
+      change-hysteria2-sni
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-hysteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      backup-hysteria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-hysteria2" class="md-nav__link">
+    <span class="md-ellipsis">
+      restore-hysteria2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      مدیریت کاربر
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="مدیریت کاربر">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      list-users
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-user
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      add-user
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      edit-user
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      reset-user
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove-user
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-user-uri" class="md-nav__link">
+    <span class="md-ellipsis">
+      show-user-uri
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      مدیریت سرور
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="مدیریت سرور">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traffic-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      traffic-status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      server-info
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manage_obfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      manage_obfs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-address" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip-address
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-geo" class="md-nav__link">
+    <span class="md-ellipsis">
+      update-geo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masquerade" class="md-nav__link">
+    <span class="md-ellipsis">
+      masquerade
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      منوی پیشرفته
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="منوی پیشرفته">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-tcp-brutal" class="md-nav__link">
+    <span class="md-ellipsis">
+      install-tcp-brutal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-warp" class="md-nav__link">
+    <span class="md-ellipsis">
+      install-warp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uninstall-warp" class="md-nav__link">
+    <span class="md-ellipsis">
+      uninstall-warp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-warp" class="md-nav__link">
+    <span class="md-ellipsis">
+      configure-warp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warp-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      warp-status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      telegram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      singbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normal-sub" class="md-nav__link">
+    <span class="md-ellipsis">
+      normal-sub
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webpanel" class="md-nav__link">
+    <span class="md-ellipsis">
+      webpanel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-webpanel-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-webpanel-url
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-webpanel-api-token" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-webpanel-api-token
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-webpanel-services-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-webpanel-services-status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-services-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      get-services-status
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="hysteria2-cli">راهنمای مدیریت Hysteria2 از طریق رابط خط فرمان (CLI)</h1>
+<p>این سند یک راهنمای جامع برای استفاده از اسکریپت <code>cli.py</code> ارائه می‌دهد، که یک رابط خط فرمان برای مدیریت Hysteria2 و سرویس‌های مرتبط است. این راهنما نصب، مدیریت کاربران، پیکربندی‌های پیشرفته و عیب‌یابی را پوشش می‌دهد. دستورات برای وضوح بیشتر در بخش‌های جداگانه سازماندهی شده‌اند. هر دستور با گزینه‌ها، آرگومان‌ها و رفتار مورد انتظار آن توضیح داده شده است.</p>
+<h2 id="hysteria2">مدیریت Hysteria2</h2>
+<p>این بخش دستورات مربوط به نصب، به‌روزرسانی و پیکربندی هسته سرویس Hysteria2 را پوشش می‌دهد.</p>
+<hr />
+<h3 id="install-hysteria2">install-hysteria2</h3>
+<p>Hysteria2 را نصب و پیکربندی می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>install-hysteria2<span class="w"> </span>--port<span class="w"> </span>&lt;port&gt;<span class="w"> </span>--sni<span class="w"> </span>&lt;sni&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--port</code> / <code>-p</code> (الزامی):</strong> شماره پورتی که Hysteria2 به آن گوش می‌دهد. باید یک عدد صحیح باشد.</li>
+<li><strong><code>--sni</code> / <code>-s</code> (اختیاری):</strong>  مشخصه نام سرور (SNI) برای استفاده.  پیش‌فرض <code>bts.com</code> است.</li>
+</ul>
+<p><strong>مثال:</strong></p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>install-hysteria2<span class="w"> </span>-p<span class="w"> </span><span class="m">443</span><span class="w"> </span>-s<span class="w"> </span>example.com
+</code></pre></div>
+<hr />
+<h3 id="uninstall-hysteria2">uninstall-hysteria2</h3>
+<p>Hysteria2 را حذف نصب می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>uninstall-hysteria2
+</code></pre></div>
+<hr />
+<h3 id="update-hysteria2">update-hysteria2</h3>
+<p>هسته Hysteria2 را به آخرین نسخه به‌روزرسانی می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>update-hysteria2
+</code></pre></div>
+<hr />
+<h3 id="restart-hysteria2">restart-hysteria2</h3>
+<p>سرویس Hysteria2 را مجدداً راه‌اندازی می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>restart-hysteria2
+</code></pre></div>
+<hr />
+<h3 id="change-hysteria2-port">change-hysteria2-port</h3>
+<p>پورتی که Hysteria2 به آن گوش می‌دهد را تغییر می‌دهد.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>change-hysteria2-port<span class="w"> </span>--port<span class="w"> </span>&lt;new_port&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--port</code> / <code>-p</code> (الزامی):</strong> شماره پورت جدید.</li>
+</ul>
+<p><strong>مثال:</strong></p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>change-hysteria2-port<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>
+</code></pre></div>
+<hr />
+<h3 id="change-hysteria2-sni">change-hysteria2-sni</h3>
+<p>SNI مورد استفاده Hysteria2 را تغییر می‌دهد.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>change-hysteria2-sni<span class="w"> </span>--sni<span class="w"> </span>&lt;new_sni&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--sni</code> / <code>-s</code> (الزامی):</strong>  SNI جدید.</li>
+</ul>
+<p><strong>مثال:</strong></p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>change-hysteria2-sni<span class="w"> </span>-s<span class="w"> </span>mynew.sni.com
+</code></pre></div>
+<hr />
+<h3 id="backup-hysteria">backup-hysteria</h3>
+<p>از پیکربندی فعلی Hysteria2 پشتیبان تهیه می‌کند.
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>backup-hysteria
+</code></pre></div>
+یک فایل zip حاوی فایل‌های پیکربندی شما در دایرکتوری <code>/etc/hysteria/</code> ایجاد می‌کند.</p>
+<hr />
+<h3 id="restore-hysteria2">restore-hysteria2</h3>
+<p>پیکربندی Hysteria2 را از یک فایل پشتیبان ZIP بازیابی می‌کند.
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>restore-hysteria2<span class="w"> </span>&lt;backup_file_path&gt;
+</code></pre></div>
+*  <code>backup_file_path</code>: مسیر فایل ZIP حاوی پشتیبان. این مسیر باید به یک فایل <em>موجود</em> اشاره کند. نمی‌تواند یک دایرکتوری باشد. باید قابل خواندن باشد.
+<strong>مثال:</strong>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>restore-hysteria2<span class="w"> </span>/path/to/backup.zip
+</code></pre></div></p>
+<hr />
+<h2 id="_1">مدیریت کاربر</h2>
+<p>این بخش دستورات مربوط به مدیریت کاربران Hysteria2 را شرح می‌دهد.</p>
+<h3 id="list-users">list-users</h3>
+<p>لیست تمام کاربران Hysteria2 پیکربندی شده را نمایش می‌دهد.</p>
+<p><div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>list-users
+</code></pre></div>
+خروجی در فرمت JSON خواهد بود.</p>
+<hr />
+<h3 id="get-user">get-user</h3>
+<p>اطلاعات دقیق در مورد یک کاربر خاص را بازیابی می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>get-user<span class="w"> </span>--username<span class="w"> </span>&lt;username&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--username</code> / <code>-u</code> (الزامی):</strong> نام کاربری کاربری که می‌خواهید اطلاعاتش را دریافت کنید.</li>
+</ul>
+<p><strong>مثال:</strong></p>
+<p><div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>get-user<span class="w"> </span>-u<span class="w"> </span>testuser
+</code></pre></div>
+خروجی در فرمت JSON خواهد بود.</p>
+<hr />
+<h3 id="add-user">add-user</h3>
+<p>یک کاربر جدید Hysteria2 اضافه می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>add-user<span class="w"> </span>--username<span class="w"> </span>&lt;username&gt;<span class="w"> </span>--traffic-limit<span class="w"> </span>&lt;traffic_limit_gb&gt;<span class="w"> </span>--expiration-days<span class="w"> </span>&lt;expiration_days&gt;<span class="w"> </span>--password<span class="w"> </span>&lt;password&gt;<span class="w"> </span>--creation-date<span class="w"> </span>&lt;date&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--username</code> / <code>-u</code> (الزامی):</strong> نام کاربری برای کاربر جدید.</li>
+<li><strong><code>--traffic-limit</code> / <code>-t</code> (الزامی):</strong>  محدودیت ترافیک برای کاربر، بر حسب گیگابایت (GB).</li>
+<li><strong><code>--expiration-days</code> / <code>-e</code> (الزامی):</strong>  تعداد روزهایی که حساب کاربری منقضی می‌شود.</li>
+<li><strong><code>--password</code> / <code>-p</code> (اختیاری):</strong>  رمز عبور برای کاربر.</li>
+<li><strong><code>--creation-date</code> / <code>-c</code> (اختیاری):</strong>  تاریخ ایجاد حساب در فرمت <code>YYYY-MM-DD</code>.</li>
+</ul>
+<p><strong>مثال:</strong></p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>add-user<span class="w"> </span>-u<span class="w"> </span>newuser<span class="w"> </span>-t<span class="w"> </span><span class="m">100</span><span class="w"> </span>-e<span class="w"> </span><span class="m">30</span><span class="w"> </span>-p<span class="w"> </span>mysecretpassword<span class="w"> </span>-c<span class="w"> </span><span class="m">2023</span>-12-25
+</code></pre></div>
+<hr />
+<h3 id="edit-user">edit-user</h3>
+<p>تنظیمات یک کاربر Hysteria2 موجود را ویرایش می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>edit-user<span class="w"> </span>--username<span class="w"> </span>&lt;username&gt;<span class="w"> </span>--new-username<span class="w"> </span>&lt;new_username&gt;<span class="w"> </span>--new-traffic-limit<span class="w"> </span>&lt;new_traffic_limit_gb&gt;<span class="w"> </span>--new-expiration-days<span class="w"> </span>&lt;new_expiration_days&gt;<span class="w"> </span>--renew-password<span class="w"> </span>--renew-creation-date<span class="w"> </span>--blocked
+</code></pre></div>
+<ul>
+<li><strong><code>--username</code> / <code>-u</code> (الزامی):</strong> نام کاربری کاربری که می‌خواهید ویرایش کنید.</li>
+<li><strong><code>--new-username</code> / <code>-nu</code> (اختیاری):</strong> نام کاربری جدید برای کاربر.</li>
+<li><strong><code>--new-traffic-limit</code> / <code>-nt</code> (اختیاری):</strong>  محدودیت ترافیک جدید بر حسب GB.</li>
+<li><strong><code>--new-expiration-days</code> / <code>-ne</code> (اختیاری):</strong> تعداد جدید روزهای انقضا.</li>
+<li><strong><code>--renew-password</code> / <code>-rp</code> (اختیاری، پرچم):</strong> اگر اضافه شود، رمز عبور کاربر را تجدید می‌کند.</li>
+<li><strong><code>--renew-creation-date</code> / <code>-rc</code> (اختیاری، پرچم):</strong> اگر اضافه شود، تاریخ ایجاد کاربر را بازنشانی می‌کند.</li>
+<li><strong><code>--blocked</code> / <code>-b</code> (اختیاری، پرچم):</strong> اگر اضافه شود، کاربر را مسدود می‌کند.</li>
+</ul>
+<p><strong>مثال (تغییر محدودیت ترافیک و مسدود کردن):</strong></p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>edit-user<span class="w"> </span>-u<span class="w"> </span>testuser<span class="w"> </span>-nt<span class="w"> </span><span class="m">50</span><span class="w"> </span>-b
+</code></pre></div>
+<hr />
+<h3 id="reset-user">reset-user</h3>
+<p>آمار ترافیک کاربر را بازنشانی می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>reset-user<span class="w"> </span>--username<span class="w"> </span>&lt;username&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--username</code> / <code>-u</code> (الزامی):</strong> نام کاربری برای بازنشانی.</li>
+</ul>
+<hr />
+<h3 id="remove-user">remove-user</h3>
+<p>یک کاربر Hysteria2 را حذف می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>remove-user<span class="w"> </span>--username<span class="w"> </span>&lt;username&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--username</code> / <code>-u</code> (الزامی):</strong> نام کاربری برای حذف.</li>
+</ul>
+<hr />
+<h3 id="show-user-uri">show-user-uri</h3>
+<p>URI مربوط به Hysteria2 را برای یک کاربر تولید و نمایش می‌دهد، به صورت اختیاری به عنوان کد QR.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>show-user-uri<span class="w"> </span>--username<span class="w"> </span>&lt;username&gt;<span class="w"> </span>--qrcode<span class="w"> </span>--ipv<span class="w"> </span>&lt;ip_version&gt;<span class="w"> </span>--all<span class="w"> </span>--singbox<span class="w"> </span>--normalsub
+</code></pre></div>
+<ul>
+<li><strong><code>--username</code> / <code>-u</code> (الزامی):</strong> نام کاربری که URI برای آن تولید می‌شود.</li>
+<li><strong><code>--qrcode</code> / <code>-qr</code> (اختیاری، پرچم):</strong> اگر اضافه شود، یک کد QR از URI تولید می‌کند.</li>
+<li><strong><code>--ipv</code> / <code>-ip</code> (اختیاری):</strong>  نسخه IP (4 یا 6) را برای URI مشخص می‌کند. پیش‌فرض 4 است.</li>
+<li><strong><code>--all</code> / <code>-a</code> (اختیاری، پرچم):</strong>  URIهای IPv4 و IPv6 را نشان می‌دهد.</li>
+<li><strong><code>--singbox</code> / <code>-s</code> (اختیاری, پرچم):</strong> اگر سرویس Singbox فعال باشد، لینک اشتراک Singbox را اضافه می‌کند.</li>
+<li><strong><code>--normalsub</code> / <code>-n</code> (اختیاری، پرچم):</strong> اگر سرویس normalsub فعال باشد، پیوند اشتراک Normal-Sub را شامل می شود.</li>
+</ul>
+<p><strong>مثال (تولید کد QR برای IPv6):</strong></p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>show-user-uri<span class="w"> </span>-u<span class="w"> </span>testuser<span class="w"> </span>-qr<span class="w"> </span>-ip<span class="w"> </span><span class="m">6</span>
+</code></pre></div>
+<hr />
+<h2 id="_2">مدیریت سرور</h2>
+<p>این بخش دستورات مربوط به سرور را پوشش می‌دهد.</p>
+<h3 id="traffic-status">traffic-status</h3>
+<p>آمار استفاده از ترافیک فعلی را نمایش می‌دهد.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>traffic-status
+</code></pre></div>
+<hr />
+<h3 id="server-info">server-info</h3>
+<p>اطلاعات سرور را نمایش می‌دهد.</p>
+<p><div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>server-info
+</code></pre></div>
+خروجی در فرمت JSON خواهد بود</p>
+<hr />
+<h3 id="manage_obfs">manage_obfs</h3>
+<p>تنظیمات مبهم‌سازی (obfs) را در پیکربندی Hysteria2 مدیریت می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>manage_obfs<span class="w"> </span>--remove
+./cli.py<span class="w"> </span>manage_obfs<span class="w"> </span>--generate
+</code></pre></div>
+<ul>
+<li><strong><code>--remove</code> / <code>-r</code> (اختیاری، پرچم):</strong>  obfs را از پیکربندی حذف می‌کند.</li>
+<li><strong><code>--generate</code> / <code>-g</code> (اختیاری، پرچم):</strong>  یک پیکربندی obfs جدید تولید می‌کند.</li>
+<li><strong>ناسازگار</strong>: شما باید فقط یکی از <code>--remove</code> یا <code>--generate</code> را ارائه دهید. ارائه ندادن هیچ کدام خطایی را چاپ می‌کند.</li>
+</ul>
+<hr />
+<h3 id="ip-address">ip-address</h3>
+<p>آدرس‌های IP سرور ذخیره شده در <code>.configs.env</code> را مدیریت می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>ip-address
+./cli.py<span class="w"> </span>ip-address<span class="w"> </span>--edit<span class="w"> </span>--ipv4<span class="w"> </span>&lt;ipv4_address&gt;
+./cli.py<span class="w"> </span>ip-address<span class="w"> </span>--edit<span class="w"> </span>--ipv6<span class="w"> </span>&lt;ipv6_address&gt;
+</code></pre></div>
+<ul>
+<li><strong>بدون گزینه:</strong>  آدرس‌های IP شناسایی شده خودکار را به پیکربندی اضافه می‌کند.</li>
+<li><strong><code>--edit</code> (اختیاری، پرچم):</strong> ویرایش دستی آدرس‌های IP را فعال می‌کند.</li>
+<li><strong><code>-4</code> / <code>--ipv4</code> (اختیاری):</strong>  یک آدرس IPv4 جدید را مشخص می‌کند (نیاز به <code>--edit</code> دارد).</li>
+<li><strong><code>-6</code> / <code>--ipv6</code> (اختیاری):</strong>  یک آدرس IPv6 جدید را مشخص می‌کند (نیاز به <code>--edit</code> دارد).<ul>
+<li><strong>با ویرایش</strong> شما <em>باید</em> حداقل یکی از <code>--ipv4</code> یا <code>--ipv6</code> را ارائه دهید.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="update-geo">update-geo</h3>
+<p>فایل‌های داده GeoIP و GeoSite را به‌روزرسانی می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>update-geo<span class="w"> </span>--country<span class="w"> </span>&lt;country&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--country</code> / <code>-c</code> (اختیاری):</strong>  کشوری که فایل‌های Geo برای آن به‌روزرسانی می‌شوند (<code>iran</code>، <code>china</code>، یا <code>russia</code>). پیش‌فرض <code>iran</code> است.</li>
+</ul>
+<p><strong>مثال (به‌روزرسانی برای چین):</strong></p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>update-geo<span class="w"> </span>-c<span class="w"> </span>china
+</code></pre></div>
+<hr />
+<h3 id="masquerade">masquerade</h3>
+<p>تنظیمات masquerade را در پیکربندی Hysteria2 مدیریت می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>masquerade<span class="w"> </span>--remove
+./cli.py<span class="w"> </span>masquerade<span class="w"> </span>--enable<span class="w"> </span>&lt;domain&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--remove</code> / <code>-r</code> (اختیاری، پرچم):</strong> پیکربندی masquerade را حذف می‌کند.</li>
+<li><strong><code>--enable</code> / <code>-e</code> (اختیاری):</strong>  masquerade را با دامنه مشخص شده فعال می‌کند.</li>
+<li><strong>ناسازگار</strong>: شما باید فقط یکی از <code>--remove</code> یا <code>--enable</code> را ارائه دهید. ارائه ندادن هیچ کدام خطایی را چاپ می‌کند.</li>
+</ul>
+<p><strong>مثال (فعال کردن masquerade):</strong></p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>masquerade<span class="w"> </span>-e<span class="w"> </span>example.com
+</code></pre></div>
+<hr />
+<h2 id="_3">منوی پیشرفته</h2>
+<p>این بخش دستوراتی را توضیح می‌دهد که عملکردهای اضافی را ارائه می‌دهند.</p>
+<h3 id="install-tcp-brutal">install-tcp-brutal</h3>
+<p>TCP Brutal را نصب می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>install-tcp-brutal
+</code></pre></div>
+<hr />
+<h3 id="install-warp">install-warp</h3>
+<p>WARP را نصب می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>install-warp
+</code></pre></div>
+<hr />
+<h3 id="uninstall-warp">uninstall-warp</h3>
+<p>WARP را حذف نصب می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>uninstall-warp
+</code></pre></div>
+<hr />
+<h3 id="configure-warp">configure-warp</h3>
+<p>تنظیمات WARP را پیکربندی می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>configure-warp<span class="w"> </span>--all<span class="w"> </span>--popular-sites<span class="w"> </span>--domestic-sites<span class="w"> </span>--block-adult-sites<span class="w"> </span>--warp-option<span class="w"> </span>&lt;option&gt;<span class="w"> </span>--warp-key<span class="w"> </span>&lt;key&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--all</code> / <code>-a</code> (اختیاری، پرچم):</strong> از WARP برای تمام ترافیک استفاده می‌کند.</li>
+<li><strong><code>--popular-sites</code> / <code>-p</code> (اختیاری، پرچم):</strong> از WARP برای وب‌سایت‌های محبوب استفاده می‌کند.</li>
+<li><strong><code>--domestic-sites</code> / <code>-d</code> (اختیاری، پرچم):</strong> از WARP برای وب‌سایت‌های داخلی (ایرانی) استفاده می‌کند.</li>
+<li><strong><code>--block-adult-sites</code> / <code>-x</code> (اختیاری، پرچم):</strong> محتوای بزرگسالان را مسدود می‌کند.</li>
+<li><strong><code>--warp-option</code> / <code>-w</code> (اختیاری):</strong> بین <code>warp</code> (عادی) و <code>warp plus</code> انتخاب می‌کند.</li>
+<li><strong><code>--warp-key</code> / <code>-k</code> (اختیاری):</strong> کلید WARP Plus (اگر <code>--warp-option</code> برابر <code>warp plus</code> باشد الزامی است).</li>
+</ul>
+<p><strong>مثال (استفاده از WARP Plus):</strong></p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>configure-warp<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;warp plus&quot;</span><span class="w"> </span>-k<span class="w"> </span>YOUR_WARP_PLUS_KEY
+</code></pre></div>
+<hr />
+<h3 id="warp-status">warp-status</h3>
+<p>وضعیت فعلی WARP را نمایش می دهد.</p>
+<p><div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>warp-status
+</code></pre></div>
+خروجی در فرمت JSON خواهد بود.</p>
+<hr />
+<h3 id="telegram">telegram</h3>
+<p>ادغام ربات تلگرام را مدیریت می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>telegram<span class="w"> </span>--action<span class="w"> </span>&lt;action&gt;<span class="w"> </span>--token<span class="w"> </span>&lt;token&gt;<span class="w"> </span>--adminid<span class="w"> </span>&lt;admin_id&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--action</code> / <code>-a</code> (الزامی):</strong>  عملی که باید انجام شود (<code>start</code> یا <code>stop</code>).</li>
+<li><strong><code>--token</code> / <code>-t</code> (برای <code>start</code> الزامی است):</strong> توکن ربات تلگرام.</li>
+<li><strong><code>--adminid</code> / <code>-aid</code> (برای <code>start</code> الزامی است):</strong>  شناسه(های) ادمین تلگرام (جدا شده با کاما).</li>
+</ul>
+<p><strong>مثال (راه‌اندازی ربات):</strong></p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>telegram<span class="w"> </span>-a<span class="w"> </span>start<span class="w"> </span>-t<span class="w"> </span>YOUR_BOT_TOKEN<span class="w"> </span>-aid<span class="w"> </span><span class="m">123456789</span>,987654321
+</code></pre></div>
+<hr />
+<h3 id="singbox">singbox</h3>
+<p>سرویس Singbox را مدیریت می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>singbox<span class="w"> </span>--action<span class="w"> </span>&lt;action&gt;<span class="w"> </span>--domain<span class="w"> </span>&lt;domain&gt;<span class="w"> </span>--port<span class="w"> </span>&lt;port&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--action</code> / <code>-a</code> (الزامی):</strong>  <code>start</code> یا <code>stop</code>.</li>
+<li><strong><code>--domain</code> / <code>-d</code> (برای <code>start</code> الزامی است):</strong>  نام دامنه برای SSL.</li>
+<li><strong><code>--port</code> / <code>-p</code> (برای <code>start</code> الزامی است):</strong> شماره پورت برای سرویس Singbox.</li>
+</ul>
+<hr />
+<h3 id="normal-sub">normal-sub</h3>
+<p>سرویس Normal-Sub را مدیریت می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>normal-sub<span class="w"> </span>--action<span class="w"> </span>&lt;action&gt;<span class="w"> </span>--domain<span class="w"> </span>&lt;domain&gt;<span class="w"> </span>--port<span class="w"> </span>&lt;port&gt;
+</code></pre></div>
+<ul>
+<li><strong><code>--action</code> / <code>-a</code> (الزامی):</strong> <code>start</code> یا <code>stop</code>.</li>
+<li><strong><code>--domain</code> / <code>-d</code> (برای <code>start</code> الزامی است):</strong> نام دامنه برای SSL.</li>
+<li><strong><code>--port</code> / <code>-p</code> (برای <code>start</code> الزامی است):</strong> شماره پورت برای سرویس.</li>
+</ul>
+<hr />
+<h3 id="webpanel">webpanel</h3>
+<p>سرویس وب پنل را مدیریت می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>webpanel<span class="w"> </span>--action<span class="w"> </span>&lt;action&gt;<span class="w"> </span>--domain<span class="w"> </span>&lt;domain&gt;<span class="w"> </span>--port<span class="w"> </span>&lt;port&gt;<span class="w"> </span>--admin-username<span class="w"> </span>&lt;admin_username&gt;<span class="w">  </span>--admin-password<span class="w"> </span>&lt;admin_password&gt;<span class="w"> </span>--expiration-minutes<span class="w"> </span>&lt;expiration_minutes&gt;<span class="w"> </span>--debug
+</code></pre></div>
+<ul>
+<li><strong><code>--action</code> / <code>-a</code> (الزامی):</strong> <code>start</code> یا <code>stop</code>.</li>
+<li><strong><code>--domain</code> / <code>-d</code> (برای <code>start</code> الزامی است):</strong> نام دامنه برای SSL.</li>
+<li><strong><code>--port</code> / <code>-p</code> (برای <code>start</code> الزامی است):</strong> شماره پورت برای سرویس وب پنل.</li>
+<li><strong><code>--admin-username</code> / <code>-au</code> (برای <code>start</code> الزامی است):</strong> نام کاربری مدیر برای وب پنل.</li>
+<li><strong><code>--admin-password</code> / <code>-ap</code> (برای <code>start</code> الزامی است):</strong> رمز عبور مدیر برای وب پنل.</li>
+<li><strong><code>--expiration-minutes</code> / <code>-e</code> (اختیاری):</strong> زمان انقضا برای جلسات وب پنل بر حسب دقیقه، پیش فرض: 20.</li>
+<li><strong><code>--debug</code> / <code>-g</code></strong> حالت اشکال زدایی وب پنل را فعال می‌کند.</li>
+<li>هنگامی که وب پنل را راه اندازی می‌کنید، اسکریپت وضعیت سرویس‌های مرتبط را نشان می‌دهد.</li>
+<li>
+<p>وب پنل دارای پورت پیش فرض <em>80</em> است.</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span>./cli.py<span class="w"> </span>webpanel<span class="w"> </span>-a<span class="w"> </span>start<span class="w">  </span>-d<span class="w"> </span>example.com<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span><span class="w"> </span>-au<span class="w"> </span>admin<span class="w"> </span>-ap<span class="w"> </span><span class="m">1234</span>
+</code></pre></div>
+</li>
+</ul>
+<hr />
+<h3 id="get-webpanel-url">get-webpanel-url</h3>
+<p>URL وب پنل را دریافت می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>get-webpanel-url
+</code></pre></div>
+<hr />
+<h3 id="get-webpanel-api-token">get-webpanel-api-token</h3>
+<p>توکن API وب پنل را دریافت می‌کند.</p>
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>get-webpanel-api-token
+</code></pre></div>
+<hr />
+<h3 id="get-webpanel-services-status">get-webpanel-services-status</h3>
+<p>وضعیت سرویس‌های وب پنل را دریافت می‌کند.</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span>./cli.py<span class="w"> </span>get-webpanel-services-status
+</code></pre></div>
+<hr />
+<h3 id="get-services-status">get-services-status</h3>
+<p>وضعیت تمام سرویس‌های مدیریت شده را نمایش می‌دهد (فعال یا غیرفعال).
+<div class="highlight"><pre><span></span><code>./cli.py<span class="w"> </span>get-services-status
+</code></pre></div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  برگشت به بالا
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ReturnFI/Blitz/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://t.me/hysteria2_panel" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u06a9\u067e\u06cc \u0634\u062f", "clipboard.copy": "\u06a9\u067e\u06cc \u06a9\u0631\u062f\u0646", "search.result.more.one": "1 \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.more.other": "# \u0645\u0648\u0631\u062f \u062f\u06cc\u06af\u0631 \u062f\u0631 \u0627\u06cc\u0646 \u0635\u0641\u062d\u0647", "search.result.none": "\u0633\u0646\u062f\u06cc \u06cc\u0627\u0641\u062a \u0646\u0634\u062f", "search.result.one": "1 \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.other": "# \u0633\u0646\u062f \u06cc\u0627\u0641\u062a \u0634\u062f", "search.result.placeholder": "\u0628\u0631\u0627\u06cc \u0634\u0631\u0648\u0639 \u062c\u0633\u062a\u062c\u0648 \u062a\u0627\u06cc\u067e \u06a9\u0646\u06cc\u062f", "search.result.term.missing": "\u0645\u0648\u062c\u0648\u062f \u0646\u06cc\u0633\u062a", "select.version": "\u0627\u0646\u062a\u062e\u0627\u0628 \u0648\u06cc\u0631\u0627\u06cc\u0634"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
